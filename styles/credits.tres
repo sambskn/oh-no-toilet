@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=10 format=3 uid="uid://j2fm527g8xbl"]
+
+[ext_resource type="Script" uid="uid://dadotdnah6arh" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_giuw7"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_cuxfo"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="3_nqnw7"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="4_00caq"]
+[ext_resource type="Script" uid="uid://cwie2urt4hgcs" path="res://addons/dialogic/Resources/dialogic_style.gd" id="5_g0pn3"]
+
+[sub_resource type="Resource" id="Resource_ih16i"]
+script = ExtResource("1_giuw7")
+overrides = {
+"global_bg_color": "Color(0, 0, 0, 1)",
+"global_font": "\"res://fonts/PressStart2P.ttf\"",
+"global_font_size": "12.0"
+}
+
+[sub_resource type="Resource" id="Resource_1o2aq"]
+script = ExtResource("1_giuw7")
+scene = ExtResource("2_cuxfo")
+
+[sub_resource type="Resource" id="Resource_qp4cr"]
+script = ExtResource("1_giuw7")
+scene = ExtResource("3_nqnw7")
+overrides = {
+"boxes_fill_width": "false",
+"boxes_offset": "Vector2(0, 25)",
+"font_size_custom": "10.0",
+"font_size_use_global": "false"
+}
+
+[sub_resource type="Resource" id="Resource_rb4vo"]
+script = ExtResource("1_giuw7")
+scene = ExtResource("4_00caq")
+overrides = {
+"autoadvance_progressbar": "false",
+"box_animation_in": "1",
+"box_animation_out": "1",
+"box_margin_bottom": "5.0",
+"box_size": "Vector2(155, 134)",
+"next_indicator_animation": "2",
+"next_indicator_enabled": "false",
+"next_indicator_size": "Vector2(10, 10)",
+"text_alignment": "1"
+}
+
+[resource]
+script = ExtResource("5_g0pn3")
+name = "credits"
+layer_list = Array[String](["10", "11", "12"])
+layer_info = {
+"": SubResource("Resource_ih16i"),
+"10": SubResource("Resource_1o2aq"),
+"11": SubResource("Resource_qp4cr"),
+"12": SubResource("Resource_rb4vo")
+}
+metadata/_latest_layer = ""

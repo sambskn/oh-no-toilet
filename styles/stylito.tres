@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=9 format=3 uid="uid://gw5ko5t6jdp1"]
+
+[ext_resource type="Script" uid="uid://dadotdnah6arh" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_11pu4"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_r80x7"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="5_h8p0p"]
+[ext_resource type="Script" uid="uid://cwie2urt4hgcs" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_t3f61"]
+
+[sub_resource type="Resource" id="Resource_beigr"]
+script = ExtResource("1_11pu4")
+overrides = {
+"global_bg_color": "Color(0.36078432, 0.23137255, 0.3647059, 0.79607844)",
+"global_font": "\"res://fonts/PressStart2P.ttf\"",
+"global_font_size": "8.0"
+}
+
+[sub_resource type="Resource" id="Resource_d57jx"]
+script = ExtResource("1_11pu4")
+scene = ExtResource("5_h8p0p")
+overrides = {
+"autoadvance_progressbar": "false",
+"box_animation_in": "0",
+"box_animation_out": "0",
+"box_margin_bottom": "2.0",
+"box_panel": "\"vn_textbox_default_panel.tres\"",
+"box_size": "Vector2(140, 40)",
+"name_label_box_offset": "Vector2(0, 10)",
+"name_label_custom_font_size": "4.0",
+"next_indicator_size": "Vector2(8, 8)",
+"text_size": "6.0"
+}
+
+[sub_resource type="Resource" id="Resource_xgbwj"]
+script = ExtResource("1_11pu4")
+scene = ExtResource("2_r80x7")
+
+[sub_resource type="Resource" id="Resource_l87es"]
+script = ExtResource("1_11pu4")
+
+[resource]
+script = ExtResource("10_t3f61")
+name = "stylito"
+layer_list = Array[String](["10", "13", "11"])
+layer_info = {
+"": SubResource("Resource_beigr"),
+"10": SubResource("Resource_xgbwj"),
+"11": SubResource("Resource_l87es"),
+"13": SubResource("Resource_d57jx")
+}
+metadata/_latest_layer = "11"

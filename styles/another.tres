@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=10 format=3 uid="uid://do4ud2h20skln"]
+
+[ext_resource type="Script" uid="uid://dadotdnah6arh" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_s61kn"]
+[ext_resource type="Script" uid="uid://cwie2urt4hgcs" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_hucc1"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_vu4aa"]
+[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="3_vu4aa"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="4_xmvqe"]
+
+[sub_resource type="Resource" id="Resource_vu4aa"]
+script = ExtResource("1_s61kn")
+overrides = {
+"global_bg_color": "Color(1, 1, 1, 1)",
+"global_font": "\"res://fonts/PressStart2P.ttf\"",
+"global_font_color": "Color(0, 0, 0, 1)",
+"global_font_size": "8.0"
+}
+
+[sub_resource type="Resource" id="Resource_xmvqe"]
+script = ExtResource("1_s61kn")
+scene = ExtResource("2_vu4aa")
+
+[sub_resource type="Resource" id="Resource_tib87"]
+script = ExtResource("1_s61kn")
+scene = ExtResource("3_vu4aa")
+overrides = {
+"box_distance": "0.0",
+"box_panel": "\"res://styles/tb.tres\"",
+"box_size": "Vector2(120, 40)",
+"name_label_hide_when_no_character": "true",
+"portrait_bg_modulate": "Color(0, 0, 0, 0)"
+}
+
+[sub_resource type="Resource" id="Resource_o1nvh"]
+script = ExtResource("1_s61kn")
+scene = ExtResource("4_xmvqe")
+overrides = {
+"text_color_hovered": "Color(1, 1, 1, 1)"
+}
+
+[resource]
+script = ExtResource("2_hucc1")
+name = "another"
+layer_list = Array[String](["10", "11", "12"])
+layer_info = {
+"": SubResource("Resource_vu4aa"),
+"10": SubResource("Resource_xmvqe"),
+"11": SubResource("Resource_tib87"),
+"12": SubResource("Resource_o1nvh")
+}
+metadata/_latest_layer = "12"

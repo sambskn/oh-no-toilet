@@ -1,0 +1,33 @@
+[style name="another"]
+[background arg="res://bgs/toilet.png" fade="0.0"]
+join monty center
+monty: it me, mompy the dog
+monty: [mood=Worried] why toilte ???
+monty: [mood=Worried]helppep
+- poop
+	monty: ohh right
+	monty: let me see
+	[background arg="res://bgs/toilet2.png" fade="0.0"]
+	<monty look at toilet>
+	monty: no room for my ass \:(
+	[music path="res://sounds/ost2.wav" fade="0.0" volume="0.0"]
+	[background arg="res://bgs/montyheadon.png" fade="0.0"]
+	monty: go outside?
+	- yes
+		monty: fuck yesssssss
+		label monty go outside
+		[background arg="res://bgs/randombg.png" fade="0.0"]
+		<they go to elevator>
+		[end_timeline]
+	- nah
+		[music path="res://sounds/ost3.wav" fade="0.0" volume="0.0"]
+		monty: you hat me \:(
+		label game over
+		[background arg="res://bgs/randombg.png" fade="0.0"]
+		game over \:(
+		jump start/
+- ass
+	monty: hm
+	monty: seeem bad
+	monty: \:(
+	jump game over
