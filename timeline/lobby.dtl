@@ -3,6 +3,17 @@
 [style name="narration"]
 you and the four legged shit cabin make it to the lobby door
 nice
-unfortunately, no more game
-[clear time="1.0"]
+[clear time="1.0" music="false" style="false"]
+[background arg="res://bgs/sidewalknight.png" fade="0.0"]
+ah[pause=0.2]. [pause=0.2]. [pause=0.2].  da city
+[style name="monty_chat_questions"]
+join monty center
+monty: k bro gonna go bust one out check it
+[clear time="0.7" style="false"]
+[background arg="res://bgs/montypiss.png" fade="0.0"]
+[sound path="res://sounds/pissing.wav" volume="0.0"]
+monty: love pissin
+[clear time="1.0" positions="false" style="false"]
+[style name="narration"]
+thats all[pause=0.2]. [pause=0.2]. [pause=0.2].  for now[pause=0.2]. [pause=0.2]. [pause=0.2]. 
 jump game_over/

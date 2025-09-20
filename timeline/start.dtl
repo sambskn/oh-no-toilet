@@ -2,13 +2,12 @@
 [music path="res://sounds/ost3.wav" fade="0.0" volume="0.0"]
 [background arg="res://bgs/randombg.png" fade="0.0"]
 oh no toilet!
-- start
-	if {Lifetime.NumRuns} == 0.0:
-		welcome...
-	elif {Lifetime.NumRuns} < 2.0:
-		again?[pause=1.0] fr?
-	else:
-		<lfg boys/if you want/love urself...>
+- start | [if {Lifetime.NumRuns} == 0.0]
+	welcome...
+	[clear time="1.0"]
+	jump opening/
+- continue | [if {Lifetime.NumRuns} > 0.0]
+	again?[pause=1.0] fr?
 	[clear time="1.0"]
 	jump opening/
 - credits

@@ -55,11 +55,13 @@ what do you do?
 	monty: leave
 	monty: leave this room
 	monty: leave this structure
-	monty: shit and piss with me on the sidewalks of big business
-	monty: brother! [pause=1.0] their shit and piss covers us!
+	monty: shit and piss with me
+	monty: on the sidewalks of big business
 	leave monty
 	[style name="narration"]
+	[wait time="0.5"]
 	[sound path="res://sounds/lucky.wav" volume="0.0"]
 	can now go outside!
 	set {CurrentRun.CanGoOutside} = true
 	jump what you do
+[clear time="1.0"]

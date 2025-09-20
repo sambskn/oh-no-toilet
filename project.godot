@@ -84,6 +84,7 @@ translation/add_separator=false
 
 window/size/viewport_width=160
 window/size/viewport_height=144
+window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
 [editor_plugins]

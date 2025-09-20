@@ -9,25 +9,40 @@ if {Lifetime.NumRuns} == 0.0:
 	[clear time="1.0" portraits="false" background="false" positions="false" style="false"]
 	[style name="monty_chat_questions"]
 	- yeah
-		set {CurrentRun.Luck} = 1.0
-	- middle choice
-	- fuck you bud
+		[style name="narration"]
+		nahhhhhh
 		set {CurrentRun.Luck} = -1.0
+	- a little *smirk*
+		set {CurrentRun.Luck} = 1.0
+		[style name="narration"]
+		ok sure bud why not
+	- middle choice
+	- luck doesnt exist
+		[style name="narration"]
+		lucky you this isnt a vindictive game
+		set {CurrentRun.Luck} = 1.0
+	- no
+		set {CurrentRun.Luck} = -1.0
+		[style name="narration"]
+		yeah you aint lucky
 	[music path="res://sounds/ost1.wav" fade="0.0" volume="0.0"]
 	[style name="narration"]
 if {CurrentRun.Luck} == 0.0:
 	you btw, are not lucky
 	only lucky in that you have a dog
+elif {CurrentRun.Luck} < 1.0:
+	'noticeably unlucky' is the name of your caste
+	not one of the good ones, sadly
+	well maybe things can improve?
+	heres a dog anyway
 elif {CurrentRun.Luck} <= 2.0:
 	you could be luckier
 	but who's compliainin
 	not you
 	even got a dog
 elif {CurrentRun.Luck} <= 100.0:
-	lucky ducky, you
-	and u have a dog?
-	cray
-	please share any tips u have
+	for some reason you are luckier than most
+	seems unfair [pause=1.0] probably is!
 	where is ur dog btw?
 [sound path="res://sounds/sqee.wav" volume="0.0"]
 oh here he come
@@ -51,6 +66,8 @@ monty: heh, what about you bub?
 		monty: i will not blow you tho
 		monty: i am a dog
 		monty: well,[pause=0.5] so [pause=0.25]
+- im unlucky & [br]blaming others | [if {CurrentRun.Luck} < 0.0]
+	monty: haha lol sucks to suck
 - big up da city mon | [if {CurrentRun.Luck} > 0.0]
 	monty: why are you saying that to a dog
 - you are a dog
