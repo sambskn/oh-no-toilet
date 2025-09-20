@@ -31,7 +31,7 @@ if {CurrentRun.Luck} == 0.0:
 	you btw, are not lucky
 	only lucky in that you have a dog
 elif {CurrentRun.Luck} < -3.0:
-	you are what we call in the buisness\:
+	you are what we call in the business\:
 	'moderately to severely unlucky'
 	good luck with that
 	you said you had a dog you could ask for advice?

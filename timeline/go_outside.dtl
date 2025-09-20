@@ -29,7 +29,7 @@ monty: frowned upon
 		monty: well yeah you're so lucky you could do it
 		monty: thats what luck is
 		monty: the will and warrant to waste without worry
-		monty: godspeed you beuatiful disaster
+		monty: godspeed you beautiful disaster
 		monty: i cant watch you do this though
 		leave monty [animation="Bounce Out" wait="true"]
 		[clear time="0.3" portraits="false" background="false" positions="false" style="false"]
@@ -43,14 +43,14 @@ monty: frowned upon
 		applause breaks out but thats not why ur here
 		ur here to defy expectations
 		to push the overton window
-		to help soceity advance to somethign better
+		to help society advance to something better
 		thank you
 		[clear time="5.0"]
 		jump game_over/
 	else:
 		monty: haha good one
 		monty: .[pause=0.5] .[pause=0.5] .[pause=0.5] never again.[pause=0.5] .[pause=0.5] .[pause=0.5] 
-- agree to disasgree
+- agree to disagree
 	monty: yeah \:)
 	monty: no need to argue
 - disagree to agree

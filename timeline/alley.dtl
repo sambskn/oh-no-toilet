@@ -15,7 +15,7 @@ ready to unleash?
 	if {CurrentRun.Luck} >= 6.0:
 		[style name="narration"]
 		you slip off your utility kilt
-		(a tasteful, yet senesual beige garment,
+		(a tasteful, yet sensual beige garment,
 		handmade by artisan-trained prisoners,
 		in a death camp/dropshipping factory,
 		located in newly admitted Western Idaho)
@@ -39,8 +39,8 @@ ready to unleash?
 - consult dog
 	join monty right
 	monty: i dont think you got a choice bub
-	monty: u lookin like <a water balloon filled with diarrahea/a poop sculpture with a piss glaze/the new exhibit at the poo musuem/your dad on a friday/charlie kirk>
-	monty: if u dont <drop trou/make like a fan & blow/ready your equipment/prepare to drop off kids at pool> rn---
+	monty: u lookin like <a water balloon filled with diarrhea/a poop sculpture with a piss glaze/the new exhibit at the poo museum/a golden corral enjoyer/charlie kirk>
+	monty: if u dont <drop trou/make like a fan & blow/ready your equipment/unload ur logs> rn -
 	monty: maybe you'll die?
 	monty: <idk/im a dog not a dog-tor haha lol/shrug emoji/haha ill piss on your grave ;)>
 	jump ready?
