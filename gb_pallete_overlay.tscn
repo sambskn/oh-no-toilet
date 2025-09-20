@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://depf007ybm1uq"]
+
+[ext_resource type="Shader" uid="uid://dd2en8bb6d4ul" path="res://gb.gdshader" id="1_pjcdp"]
+[ext_resource type="Texture2D" uid="uid://f0looxjgyfww" path="res://palletes/bw.png" id="2_3865f"]
+[ext_resource type="Texture2D" uid="uid://btiyo22bfn2yq" path="res://palletes/kirokaze-gameboy-1x.png" id="3_pjcdp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jnlp7"]
+shader = ExtResource("1_pjcdp")
+shader_parameter/brightness = 0.0
+shader_parameter/source_palette = ExtResource("2_3865f")
+shader_parameter/target_palette = ExtResource("3_pjcdp")
+
+[node name="ColorRect" type="ColorRect"]
+z_index = 1
+material = SubResource("ShaderMaterial_jnlp7")
+offset_right = 161.0
+offset_bottom = 144.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
