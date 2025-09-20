@@ -1,0 +1,6 @@
+[style name="main_menu"]
+[background arg="res://bgs/blur.png" fade="0.0"]
+game over
+set {Lifetime.NumRuns} += 1.0
+[save slot="main"]
+jump start/

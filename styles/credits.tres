@@ -36,11 +36,16 @@ overrides = {
 "box_animation_in": "1",
 "box_animation_out": "1",
 "box_margin_bottom": "5.0",
+"box_panel": "\"res://styles/narration_block.tres\"",
 "box_size": "Vector2(155, 134)",
 "next_indicator_animation": "2",
 "next_indicator_enabled": "false",
 "next_indicator_size": "Vector2(10, 10)",
-"text_alignment": "1"
+"text_alignment": "1",
+"typing_sounds_mode": "1",
+"typing_sounds_pitch": "0.5",
+"typing_sounds_pitch_variance": "0.49",
+"typing_sounds_sounds_folder": "\"res://sounds/narration\""
 }
 
 [resource]
@@ -53,4 +58,4 @@ layer_info = {
 "11": SubResource("Resource_qp4cr"),
 "12": SubResource("Resource_rb4vo")
 }
-metadata/_latest_layer = ""
+metadata/_latest_layer = "12"

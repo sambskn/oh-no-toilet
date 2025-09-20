@@ -28,6 +28,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "credits": "res://timeline/credits.dtl",
+"game_over": "res://timeline/game_over.dtl",
+"opening": "res://timeline/opening.dtl",
 "start": "res://timeline/start.dtl",
 "timeline1": "res://timeline/timeline1.dtl"
 }
@@ -54,10 +56,17 @@ animations/join_default="Instant In"
 animations/leave_default="Zoom Out"
 animations/cross_fade_default="Fade Cross"
 text/autopauses={}
-layout/style_list=["res://styles/stylito.tres", "res://styles/portrait.tres", "res://styles/another.tres", "res://styles/main_menu.tres", "res://styles/credits.tres"]
+layout/style_list=["res://styles/stylito.tres", "res://styles/portrait.tres", "res://styles/another.tres", "res://styles/main_menu.tres", "res://styles/credits.tres", "res://styles/narration.tres", "res://styles/monty_chat_questions.tres"]
 layout/default_style="res://styles/stylito.tres"
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"CurrentRun": {
+"Luck": 0
+},
+"Lifetime": {
+"NumRuns": 0
+}
+}
 text/autoadvance_enabled=false
 text/autocolor_names=false
 translation/enabled=false

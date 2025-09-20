@@ -13,6 +13,13 @@ overrides = {
 "global_font_size": "8.0"
 }
 
+[sub_resource type="Resource" id="Resource_xgbwj"]
+script = ExtResource("1_11pu4")
+scene = ExtResource("2_r80x7")
+
+[sub_resource type="Resource" id="Resource_l87es"]
+script = ExtResource("1_11pu4")
+
 [sub_resource type="Resource" id="Resource_d57jx"]
 script = ExtResource("1_11pu4")
 scene = ExtResource("5_h8p0p")
@@ -28,13 +35,6 @@ overrides = {
 "next_indicator_size": "Vector2(8, 8)",
 "text_size": "6.0"
 }
-
-[sub_resource type="Resource" id="Resource_xgbwj"]
-script = ExtResource("1_11pu4")
-scene = ExtResource("2_r80x7")
-
-[sub_resource type="Resource" id="Resource_l87es"]
-script = ExtResource("1_11pu4")
 
 [resource]
 script = ExtResource("10_t3f61")

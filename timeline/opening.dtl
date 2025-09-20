@@ -1,0 +1,52 @@
+[style name="narration"]
+[music path="res://sounds/ost1.wav" fade="0.0" volume="0.0"]
+[background arg="res://bgs/dacity.png" fade="0.0"]
+we open on da city
+so great to be here
+\if ur lucky ;)
+if {CurrentRun.Luck} == 0.0:
+	you btw, are not lucky
+	only lucky in that you have a dog
+elif {CurrentRun.Luck} <= 2.0:
+	you could be luckier
+	but who's compliainin
+	not you
+	even got a dog
+elif {CurrentRun.Luck} <= 100.0:
+	lucky ducky, you
+	and u have a dog?
+	cray
+	please share any tips u have
+	where is ur dog btw?
+[sound path="res://sounds/sqee.wav" volume="0.0"]
+oh here he come
+join monty right
+[style name="monty_chat_questions"]
+monty: hi its me the dog
+monty: i........
+monty: i love you . . .[pause=0.5]<3
+leave --All--
+[background arg="res://bgs/monty next window.png" fade="0.0"]
+[style name="monty_chat_questions"]
+label you love the city?
+monty: i love the city
+monty: even though it dont love me back
+monty: heh, what about you bub?
+- tha city can blow me | [if {CurrentRun.Luck} == 0.0]
+	monty: aint that the truth
+	monty: i will not blow you tho
+	monty: i am a dog
+	monty: well,[pause=0.5] bye.
+	jump game_over/
+- its aight i guess | [if {CurrentRun.Luck} > 0.0]
+	monty: ok mr big shot
+	monty: you win!
+	jump game_over/
+- you are a dog
+	monty: \:) yeah [pause=0.5] i guess i am
+	[style name="narration"]
+	[sound path="res://sounds/lucky.wav" volume="0.0"]
+	luck increase by 1!
+	set {CurrentRun.Luck} += 1.0
+	[style name="monty_chat_questions"]
+	jump you love the city?

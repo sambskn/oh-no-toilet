@@ -3,7 +3,12 @@
 [background arg="res://bgs/randombg.png" fade="0.0"]
 oh no toilet!
 - start
-	oh brother...
-	jump timeline1/
+	if {Lifetime.NumRuns} == 0.0:
+		welcome...
+	elif {Lifetime.NumRuns} < 2.0:
+		again?[pause=1.0] fr?
+	else:
+		<lfg boys/if you want/love urself...>
+	jump opening/
 - credits
 	jump credits/

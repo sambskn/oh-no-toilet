@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=10 format=3 uid="uid://wvv3xa041tbv"]
+
+[ext_resource type="Script" uid="uid://dadotdnah6arh" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_7ydth"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_2mxxv"]
+[ext_resource type="Script" uid="uid://cwie2urt4hgcs" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_pw63a"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="3_2mxxv"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="4_mgx7s"]
+
+[sub_resource type="Resource" id="Resource_2mxxv"]
+script = ExtResource("1_7ydth")
+overrides = {
+"global_bg_color": "Color(0, 0, 0, 1)",
+"global_font": "\"res://fonts/PressStart2P.ttf\"",
+"global_font_size": "8.0"
+}
+
+[sub_resource type="Resource" id="Resource_mgx7s"]
+script = ExtResource("1_7ydth")
+scene = ExtResource("2_2mxxv")
+
+[sub_resource type="Resource" id="Resource_i2474"]
+script = ExtResource("1_7ydth")
+scene = ExtResource("3_2mxxv")
+overrides = {
+"autoadvance_progressbar": "false",
+"box_margin_bottom": "2.0",
+"box_panel": "\"res://styles/narration_block.tres\"",
+"box_size": "Vector2(150, 60)",
+"next_indicator_animation": "2",
+"next_indicator_size": "Vector2(4, 4)",
+"typing_sounds_mode": "1",
+"typing_sounds_pitch": "1.3",
+"typing_sounds_pitch_variance": "0.2",
+"typing_sounds_sounds_folder": "\"res://sounds/narration\""
+}
+
+[sub_resource type="Resource" id="Resource_y61ms"]
+script = ExtResource("1_7ydth")
+scene = ExtResource("4_mgx7s")
+
+[resource]
+script = ExtResource("2_pw63a")
+name = "narration"
+layer_list = Array[String](["10", "12", "11"])
+layer_info = {
+"": SubResource("Resource_2mxxv"),
+"10": SubResource("Resource_mgx7s"),
+"11": SubResource("Resource_i2474"),
+"12": SubResource("Resource_y61ms")
+}
+metadata/_latest_layer = "11"
