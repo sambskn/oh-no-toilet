@@ -5,12 +5,11 @@ you go to the toilet room door
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 i mean the bathroom door
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
-whatever
-[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 hand on the door
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 ready to open it
-[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+[clear time="1.0" portraits="false" background="false" positions="false" style="false"]
+[sound path="res://sounds/lucky.wav" volume="0.0"]
 and you do!
 [clear time="1.0" portraits="false" music="false" positions="false" style="false"]
 [sound path="res://sounds/sqee.wav" volume="0.0"]

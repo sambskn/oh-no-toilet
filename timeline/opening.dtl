@@ -67,5 +67,13 @@ monty: you should go to the toilet
 	luck decrease by 1!
 	set {CurrentRun.Luck} += -1.0
 	[style name="monty_chat_questions"]
+if {CurrentRun.CanGoOutside} == true:
+	[style name="narration"]
+	right, the toilet, the great outdoors
+	love to piss and shit on sidewalks
+	if {CurrentRun.Luck} > 1.0:
+		and parked cars
+	[clear time="1.0"]
+	jump go_outside/
 [clear time="1.0"]
 jump go_to_toilet/

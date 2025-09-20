@@ -1,0 +1,8 @@
+[music path="res://sounds/ost1.wav" fade="0.0" volume="0.0"]
+[background arg="res://bgs/montydoor.png" fade="0.0"]
+[style name="narration"]
+you and the four legged shit cabin make it to the lobby door
+nice
+unfortunately, no more game
+[clear time="1.0"]
+jump game_over/

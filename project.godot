@@ -31,7 +31,9 @@ directories/dtl_directory={
 "game_over": "res://timeline/game_over.dtl",
 "go_outside": "res://timeline/go_outside.dtl",
 "go_to_toilet": "res://timeline/go_to_toilet.dtl",
+"lobby": "res://timeline/lobby.dtl",
 "opening": "res://timeline/opening.dtl",
+"stairs": "res://timeline/stairs.dtl",
 "start": "res://timeline/start.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
@@ -102,4 +104,5 @@ dialogic_default_action={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)

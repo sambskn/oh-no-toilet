@@ -1,0 +1,21 @@
+[background arg="res://bgs/stairs.png" fade="0.0"]
+[style name="narration"]
+[music path="res://sounds/ost4.wav" fade="0.0" volume="0.0"]
+welp its the stairs
+if {CurrentRun.Luck} < 1.0:
+	these usually go well!
+you get ready to go down them
+remember what your dad told you\:
+"never go city you'll die falling down stairs"
+fuck you dad
+[clear time="1.0" portraits="false" background="false" positions="false" style="false"]
+if {CurrentRun.Luck} <= 1.0:
+	[sound path="res://sounds/unlucky.wav" volume="0.0"]
+	wow you fell down the stairs and died
+	darn
+	jump game_over/
+elif {CurrentRun.Luck} > 1.0:
+	[sound path="res://sounds/lucky.wav" volume="0.0"]
+	you go down the stairs like normal
+	unfortunately, game over
+	jump game_over/

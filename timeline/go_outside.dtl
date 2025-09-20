@@ -7,5 +7,31 @@ monty there
 [style name="monty_chat_questions"]
 join monty right
 monty: sup i see you decided to party with the big dogs
-monty: well guess what this is the end of the game
-jump game_over/
+monty: lets go piss or shit
+monty: i hope theres a cop we can piss or shit on
+monty: i can say that because im a dog
+monty: if you say that you could get arrested
+[clear time="1.0" music="false" background="false" positions="false" style="false"]
+[music path="res://sounds/ost3.wav" fade="0.0" volume="0.0"]
+[background arg="res://bgs/montyneardoor.png" fade="0.0"]
+[clear time="1.0" portraits="false" positions="false" style="false"]
+[sound path="res://sounds/sqee.wav" volume="0.0"]
+[style name="narration"]
+[background arg="res://bgs/blur.png" fade="0.0"]
+\door opens, dog and you exit to hallway
+just bursting to the brim with excrement
+a surprise inside like a kinder egg
+label how we getting out
+how we getting outside?
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+[style name="monty_chat_questions"]
+- elevator
+	[style name="narration"]
+	sure! stairs it is!
+	[clear time="1.0"]
+	jump stairs/
+- stairs
+	[style name="narration"]
+	why not!
+	[clear time="1.0"]
+	jump stairs/
