@@ -4,6 +4,17 @@
 we open on da city
 so great to be here
 \if ur lucky ;)
+if {Lifetime.NumRuns} == 0.0:
+	wait are you lucky?
+	[clear time="1.0" portraits="false" background="false" positions="false" style="false"]
+	[style name="monty_chat_questions"]
+	- yeah
+		set {CurrentRun.Luck} = 1.0
+	- middle choice
+	- fuck you bud
+		set {CurrentRun.Luck} = -1.0
+	[music path="res://sounds/ost1.wav" fade="0.0" volume="0.0"]
+	[style name="narration"]
 if {CurrentRun.Luck} == 0.0:
 	you btw, are not lucky
 	only lucky in that you have a dog
@@ -31,22 +42,23 @@ leave --All--
 [style name="monty_chat_questions"]
 label you love the city?
 monty: i love the city
-monty: even though it dont love me back
+monty: <even though it dont love me back/*sniff* its got that stank that break the bank/kinda place that makes you miss dyin>
 monty: heh, what about you bub?
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 - tha city can blow me | [if {CurrentRun.Luck} == 0.0]
 	monty: aint that the truth
-	monty: i will not blow you tho
-	monty: i am a dog
-	monty: well,[pause=0.5] anyway
-- its aight i guess | [if {CurrentRun.Luck} > 0.0]
+	if {CurrentRun.Luck} < 1.0:
+		monty: i will not blow you tho
+		monty: i am a dog
+		monty: well,[pause=0.5] so [pause=0.25]
+- big up da city mon | [if {CurrentRun.Luck} > 0.0]
 	monty: why are you saying that to a dog
 - you are a dog
 	monty: \:) yeah [pause=0.5] i guess i am
 	[style name="narration"]
 	[sound path="res://sounds/lucky.wav" volume="0.0"]
-	luck increase by 1!
-	set {CurrentRun.Luck} += 1.0
+	luck increase by 10! <that seems like a lot!/really???/why not?>
+	set {CurrentRun.Luck} += 10.0
 	[style name="monty_chat_questions"]
 monty: anyway how we doin?
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]

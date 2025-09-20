@@ -17,5 +17,4 @@ if {CurrentRun.Luck} <= 1.0:
 elif {CurrentRun.Luck} > 1.0:
 	[sound path="res://sounds/lucky.wav" volume="0.0"]
 	you go down the stairs like normal
-	unfortunately, game over
-	jump game_over/
+	jump lobby/

@@ -10,6 +10,17 @@ hand on the door
 ready to open it
 [clear time="1.0" portraits="false" background="false" positions="false" style="false"]
 [sound path="res://sounds/lucky.wav" volume="0.0"]
+if {CurrentRun.Luck} > 5.0:
+	and you stop
+	luckiness overwhelms you
+	the bathroom fuckin sucks
+	today you can piss and shit outside
+	without consequence!
+	[sound path="res://sounds/lucky.wav" volume="0.0"]
+	can now go outside!
+	set {CurrentRun.CanGoOutside} = true
+	[clear time="1.0"]
+	jump go_outside/
 and you do!
 [clear time="1.0" portraits="false" music="false" positions="false" style="false"]
 [sound path="res://sounds/sqee.wav" volume="0.0"]
