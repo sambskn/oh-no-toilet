@@ -1,0 +1,55 @@
+[music path="res://sounds/ost2.wav" fade="0.0" volume="0.0"]
+[background arg="res://bgs/handondoor.png" fade="0.0"]
+[style name="narration"]
+you go to the toilet room door
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+i mean the bathroom door
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+whatever
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+hand on the door
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+ready to open it
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+and you do!
+[clear time="1.0" portraits="false" music="false" positions="false" style="false"]
+[sound path="res://sounds/sqee.wav" volume="0.0"]
+[background arg="res://bgs/toilet.png" fade="0.0"]
+wow thats the toilet
+label what you do
+[music path="res://sounds/ost3.wav" fade="0.0" volume="0.0"]
+what do you do?
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+[style name="monty_chat_questions"]
+- go outside | [if {CurrentRun.CanGoOutside} == true]
+	[style name="narration"]
+	you decide to go outside
+	shitting inside sucks
+	pissing inside sucks
+	everything sucks
+	jump go_outside/
+- inspect toilet
+	[background arg="res://bgs/toilet2.png" fade="0.0"]
+	[style name="narration"]
+	reminds you of <hole/home/hell/a mothers touch>
+	that cant be good
+	[clear time="0.3" text="false" portraits="false" background="false" positions="false" style="false"]
+	[sound path="res://sounds/unlucky.wav" volume="0.0"]
+	luck decrease by 1! <shoot/drat/darn/ahh nuts/crapoli/fuck>!
+	set {CurrentRun.Luck} -= 1.0
+	jump what you do
+- consult dog | [if {CurrentRun.CanGoOutside} == false]
+	[style name="monty_chat_questions"]
+	join monty right
+	monty: shit outside you animal
+	monty: leave
+	monty: leave this room
+	monty: leave this structure
+	monty: shit and piss with me on the sidewalks of big business
+	monty: brother! [pause=1.0] their shit and piss covers us!
+	leave monty
+	[style name="narration"]
+	[sound path="res://sounds/lucky.wav" volume="0.0"]
+	can now go outside!
+	set {CurrentRun.CanGoOutside} = true
+	jump what you do

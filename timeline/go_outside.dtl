@@ -1,0 +1,11 @@
+[music path="res://sounds/ost4.wav" fade="0.0" volume="0.0"]
+[background arg="res://bgs/montysittingnear door.png" fade="0.0"]
+[style name="narration"]
+you approach the door
+monty there
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+[style name="monty_chat_questions"]
+join monty right
+monty: sup i see you decided to party with the big dogs
+monty: well guess what this is the end of the game
+jump game_over/

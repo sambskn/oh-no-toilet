@@ -1,5 +1,5 @@
 [style name="main_menu"]
-[music path="res://sounds/ost1.wav" fade="0.0" volume="0.0"]
+[music path="res://sounds/ost3.wav" fade="0.0" volume="0.0"]
 [background arg="res://bgs/randombg.png" fade="0.0"]
 oh no toilet!
 - start
@@ -9,6 +9,8 @@ oh no toilet!
 		again?[pause=1.0] fr?
 	else:
 		<lfg boys/if you want/love urself...>
+	[clear time="1.0"]
 	jump opening/
 - credits
+	[clear time="1.0"]
 	jump credits/

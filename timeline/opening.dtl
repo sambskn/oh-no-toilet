@@ -26,22 +26,21 @@ monty: hi its me the dog
 monty: i........
 monty: i love you . . .[pause=0.5]<3
 leave --All--
+[clear time="1.0" music="false"]
 [background arg="res://bgs/monty next window.png" fade="0.0"]
 [style name="monty_chat_questions"]
 label you love the city?
 monty: i love the city
 monty: even though it dont love me back
 monty: heh, what about you bub?
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 - tha city can blow me | [if {CurrentRun.Luck} == 0.0]
 	monty: aint that the truth
 	monty: i will not blow you tho
 	monty: i am a dog
-	monty: well,[pause=0.5] bye.
-	jump game_over/
+	monty: well,[pause=0.5] anyway
 - its aight i guess | [if {CurrentRun.Luck} > 0.0]
-	monty: ok mr big shot
-	monty: you win!
-	jump game_over/
+	monty: why are you saying that to a dog
 - you are a dog
 	monty: \:) yeah [pause=0.5] i guess i am
 	[style name="narration"]
@@ -49,4 +48,24 @@ monty: heh, what about you bub?
 	luck increase by 1!
 	set {CurrentRun.Luck} += 1.0
 	[style name="monty_chat_questions"]
-	jump you love the city?
+monty: anyway how we doin?
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+- gotta poop/piss
+- gotta piss and shit
+- really gotta shit
+- mostly full of piss
+monty: <oh of course}/most definitely/that is normal>
+label go to the toilet
+monty: you should go to the toilet
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+- yeah
+	monty: yay \:)
+- no
+	monty: shut up and go >\:(
+	[style name="narration"]
+	[sound path="res://sounds/unlucky.wav" volume="0.0"]
+	luck decrease by 1!
+	set {CurrentRun.Luck} += -1.0
+	[style name="monty_chat_questions"]
+[clear time="1.0"]
+jump go_to_toilet/

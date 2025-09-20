@@ -29,6 +29,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "credits": "res://timeline/credits.dtl",
 "game_over": "res://timeline/game_over.dtl",
+"go_outside": "res://timeline/go_outside.dtl",
+"go_to_toilet": "res://timeline/go_to_toilet.dtl",
 "opening": "res://timeline/opening.dtl",
 "start": "res://timeline/start.dtl"
 }
@@ -60,6 +62,7 @@ layout/default_style=""
 glossary/default_case_sensitive=true
 variables={
 "CurrentRun": {
+"CanGoOutside": false,
 "Luck": 0
 },
 "Lifetime": {
