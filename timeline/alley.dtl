@@ -5,18 +5,19 @@ you follow a thin sidewalk off the main street
 in between two buildings, away from voyeurs
 this is a place you could picture yourself pissing in
 or shitting!
+label ready?
+[style name="narration"]
 ready to unleash?
 [clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
 [wait time="0.1"]
 [style name="monty_chat_questions"]
 - unleash the[br]current
-	if {CurrentRun.Luck} == 6.0:
+	if {CurrentRun.Luck} >= 6.0:
 		[style name="narration"]
 		you slip off your utility kilt
 		(a tasteful, yet senesual beige garment,
 		handmade by artisan-trained prisoners,
 		in a death camp/dropshipping factory,
-		in a medium secutiry penitentiary,
 		located in newly admitted Western Idaho)
 		you get ready to let everything you can
 		out of all your holes
@@ -30,19 +31,25 @@ ready to unleash?
 		an important spark in the flame of revolution
 		this is an ending to this game
 		but it is not the end of your work
+		jump game_over/
 	else:
 		# not lucky enough to poop
 		monty: uh oh here comes someone
+		jump temp_game_end/
 - consult dog
 	join monty right
 	monty: i dont think you got a choice bub
-	monty: you look like <a water balloon filled with diarrahea/a poop sculpture with a piss glaze/a installation art piece at the shit musuem>
-	monty: if you dont <drop trou/make like a faucet and spray/ready your equipment/prepare to drop off kids at some location> right now---
-	monty: maybe you'll die? <idk/im a dog not a dog-tor haha lol/shrug emoji>
+	monty: u lookin like <a water balloon filled with diarrahea/a poop sculpture with a piss glaze/the new exhibit at the poo musuem/your dad on a friday/charlie kirk>
+	monty: if u dont <drop trou/make like a fan & blow/ready your equipment/prepare to drop off kids at pool> rn---
+	monty: maybe you'll die?
+	monty: <idk/im a dog not a dog-tor haha lol/shrug emoji/haha ill piss on your grave ;)>
+	jump ready?
 - dont
+	[clear time="0.3" text="false" style="false"]
 	[style name="narration"]
 	[sound path="res://sounds/unlucky.wav" volume="0.0"]
 	you really should have let loose
 	now your body is going to explode
+	[sound path="res://sounds/sqee.wav" volume="0.0"]
 	boom
 	jump game_over/

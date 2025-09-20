@@ -28,7 +28,7 @@ monty: ok you ready to explode now?
 	[clear time="0.5"]
 	[sound path="res://sounds/pissing.wav" volume="0.0"]
 	[style name="narration"]
-	yo piss
+	you piss
 	and then shit
 	its every where and it's great
 	if {CurrentRun.Luck} > 1.0:
@@ -46,6 +46,7 @@ monty: ok you ready to explode now?
 	join monty right
 	monty: haha you are a coward
 	monty: lets go down that alleyway then
+	leave monty
 	jump alley/
 - is this safe? | [if {Lifetime.KnowsAboutSaftey} == false]
 	[style name="narration"]
@@ -61,8 +62,9 @@ monty: ok you ready to explode now?
 	monty: one of grand sumo's finest rikishi
 	monty: could pull up out of nowhere,
 	monty: yorikiri the shit out of us,
-	monty: no gyoji out here either,
-	monty: breaking 6-7 ribs, minimum.
+	monty: (no gyoji out here either)
+	monty: breaking 6-7 ribs, minimum,
+	monty: which'll really hurt the weed budget
 	monty: yeah anyway, just don't be unlucky
 	monty: and its fine
 	set {Lifetime.KnowsAboutSaftey} = true

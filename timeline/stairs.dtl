@@ -7,12 +7,12 @@ if {CurrentRun.Luck} < 1.0:
 you get ready to go down them
 remember what your dad told you\:
 "never go city you'll die falling down stairs"
-fuck you dad
+<thanks dad/he never trusted inclines in general/i didn't choose the city dad, it chose me>
 [clear time="1.0" portraits="false" background="false" positions="false" style="false"]
 if {CurrentRun.Luck} <= 1.0:
 	[sound path="res://sounds/unlucky.wav" volume="0.0"]
 	wow you fell down the stairs and died
-	darn
+	<darn/not even lucky enough for stairs \:(>
 	jump game_over/
 elif {CurrentRun.Luck} > 1.0:
 	[sound path="res://sounds/lucky.wav" volume="0.0"]
