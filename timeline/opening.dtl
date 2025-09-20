@@ -30,10 +30,14 @@ if {Lifetime.NumRuns} == 0.0:
 if {CurrentRun.Luck} == 0.0:
 	you btw, are not lucky
 	only lucky in that you have a dog
-elif {CurrentRun.Luck} < 1.0:
+elif {CurrentRun.Luck} < -3.0:
+	you are what we call in the buisness\:
+	'moderately to severely unlucky'
+	good luck with that
+	you said you had a dog you could ask for advice?
+elif {CurrentRun.Luck} < -1.0:
 	'noticeably unlucky' is the name of your caste
-	not one of the good ones, sadly
-	well maybe things can improve?
+	not one of the good ones, sadlyw
 	heres a dog anyway
 elif {CurrentRun.Luck} <= 2.0:
 	you could be luckier
@@ -60,7 +64,7 @@ monty: i love the city
 monty: <even though it dont love me back/*sniff* its got that stank that break the bank/kinda place that makes you miss dyin>
 monty: heh, what about you bub?
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
-- tha city can blow me | [if {CurrentRun.Luck} == 0.0]
+- tha city can blow me
 	monty: aint that the truth
 	if {CurrentRun.Luck} < 1.0:
 		monty: i will not blow you tho
@@ -69,7 +73,7 @@ monty: heh, what about you bub?
 - im unlucky & [br]blaming others | [if {CurrentRun.Luck} < 0.0]
 	monty: haha lol sucks to suck
 - big up da city mon | [if {CurrentRun.Luck} > 0.0]
-	monty: why are you saying that to a dog
+	monty: why are you saying that
 - you are a dog
 	monty: \:) yeah [pause=0.5] i guess i am
 	[style name="narration"]
