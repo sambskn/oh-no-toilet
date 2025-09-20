@@ -2,3 +2,5 @@ extends Node2D
 
 func _ready() -> void:
 	Dialogic.start("start")
+	Dialogic.Save.load("Main")
+	

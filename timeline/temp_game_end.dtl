@@ -1,0 +1,4 @@
+[clear time="1.0" positions="false" style="false"]
+[style name="narration"]
+thats all[pause=0.2]. [pause=0.2]. [pause=0.2].  for now[pause=0.2]. [pause=0.2]. [pause=0.2].
+jump game_over/

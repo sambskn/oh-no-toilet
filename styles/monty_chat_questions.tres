@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=12 format=3 uid="uid://c2gmfvsnmxy8q"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=14 format=3 uid="uid://c2gmfvsnmxy8q"]
 
 [ext_resource type="Script" uid="uid://dadotdnah6arh" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_fb4lg"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_7n71e"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="3_7n71e"]
 [ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="4_0q7pf"]
 [ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="5_4tljm"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="6_dfjij"]
 
 [sub_resource type="Resource" id="Resource_7n71e"]
 script = ExtResource("1_fb4lg")
@@ -43,6 +44,7 @@ overrides = {
 "name_label_box_offset": "Vector2(0, 10)",
 "name_label_box_panel": "\"res://styles/tb.tres\"",
 "next_indicator_animation": "2",
+"next_indicator_enabled": "false",
 "next_indicator_size": "Vector2(8, 8)"
 }
 
@@ -50,15 +52,20 @@ overrides = {
 script = ExtResource("1_fb4lg")
 scene = ExtResource("5_4tljm")
 
+[sub_resource type="Resource" id="Resource_n5sqd"]
+script = ExtResource("1_fb4lg")
+scene = ExtResource("6_dfjij")
+
 [resource]
 script = ExtResource("2_k2qoe")
 name = "monty_chat_questions"
-layer_list = Array[String](["10", "13", "12", "11"])
+layer_list = Array[String](["10", "14", "13", "12", "11"])
 layer_info = {
 "": SubResource("Resource_7n71e"),
 "10": SubResource("Resource_0q7pf"),
 "11": SubResource("Resource_4tljm"),
 "12": SubResource("Resource_dfjij"),
-"13": SubResource("Resource_sxu5y")
+"13": SubResource("Resource_sxu5y"),
+"14": SubResource("Resource_n5sqd")
 }
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "12"

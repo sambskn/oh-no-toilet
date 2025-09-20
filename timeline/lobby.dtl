@@ -1,10 +1,11 @@
 [music path="res://sounds/ost1.wav" fade="0.0" volume="0.0"]
 [background arg="res://bgs/montydoor.png" fade="0.0"]
 [style name="narration"]
-you and the four legged shit cabin make it to the lobby door
+you and the 4 leg poop machine make it to the lobby door
 nice
-[clear time="1.0" music="false" style="false"]
+[clear time="1.0" style="false"]
 [background arg="res://bgs/sidewalknight.png" fade="0.0"]
+[music path="res://sounds/ost6.wav" fade="0.0" volume="0.0"]
 ah[pause=0.2]. [pause=0.2]. [pause=0.2].  da city
 [style name="monty_chat_questions"]
 join monty center
@@ -14,6 +15,61 @@ monty: k bro gonna go bust one out check it
 [sound path="res://sounds/pissing.wav" volume="0.0"]
 monty: love pissin
 [clear time="1.0" positions="false" style="false"]
-[style name="narration"]
-thats all[pause=0.2]. [pause=0.2]. [pause=0.2].  for now[pause=0.2]. [pause=0.2]. [pause=0.2]. 
-jump game_over/
+[music path="res://sounds/ost6.wav" fade="0.0" volume="0.0"]
+[background arg="res://bgs/walkingmonty.png" fade="0.5" transition="Swipe Left To Right"]
+label ready to explode?
+[style name="monty_chat_questions"]
+join monty leftmost
+monty: ok you ready to explode now?
+[clear time="0.5" music="false" background="false" positions="false" style="false"]
+- yeah broski[br]cant wait to [br]piss on a cop
+	join monty right
+	monty: thumbs up!
+	[clear time="0.5"]
+	[sound path="res://sounds/pissing.wav" volume="0.0"]
+	[style name="narration"]
+	yo piss
+	and then shit
+	its every where and it's great
+	if {CurrentRun.Luck} > 1.0:
+		its every where and it's great
+		this is a good ending
+		[clear time="1.0"]
+		jump temp_game_end/
+	else:
+		[sound path="res://sounds/unlucky.wav" volume="0.0"]
+		oh wait you were still wearing clothes
+		noooooooo
+		[clear time="1.0"]
+		jump game_over/
+- uhh....[br]im nervous
+	join monty right
+	monty: haha you are a coward
+	monty: lets go down that alleyway then
+	jump alley/
+- is this safe? | [if {Lifetime.KnowsAboutSaftey} == false]
+	[style name="narration"]
+	monty pulls you over to the side of the side walk
+	he pretends to light a cigarette butt from the ground
+	[style name="monty_chat_questions"]
+	join monty right
+	monty: act natural bub
+	monty: cant believe we gortta go over this again
+	monty: yknow weve been city dogs for some time now
+	monty: and since day one weve known the risk
+	monty: the risk that at any moment on these streets...
+	monty: one of grand sumo's finest rikishi
+	monty: could pull up out of nowhere,
+	monty: yorikiri the shit out of us,
+	monty: no gyoji out here either,
+	monty: breaking 6-7 ribs, minimum.
+	monty: yeah anyway, just don't be unlucky
+	monty: and its fine
+	set {Lifetime.KnowsAboutSaftey} = true
+	[clear time="0.5" portraits="false" background="false" positions="false" style="false"]
+	[sound path="res://sounds/lucky.wav" volume="0.0"]
+	[style name="narration"]
+	you understand safety again!
+	jump ready to explode?
+# temp game end (should just be a backup now)
+jump temp_game_end/
