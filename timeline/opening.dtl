@@ -75,7 +75,7 @@ something(s) inside you need to get out pronto
 join monty right
 [style name="monty_chat_questions"]
 monty: hi its me the dog
-monty: damn bro, <u look like a day old shit danish/u smell like tuberclulosis!/u remind me of a corpse i saw/u look like the cum rag's cum rag>
+monty: damn bro, <u look like a day old shit danish/u smell like tuberculosis!/u remind me of a corpse i saw/u look like the cum rag's cum rag>
 monty: ur having crazy bad luck lately bro
 monty: every day you wake up about to vom dot com
 [clear time="0.1" portraits="false" music="false" background="false" positions="false" style="false"]
@@ -87,7 +87,7 @@ huh maybe this is the result your own actions??
 [wait time="0.2"]
 [style name="monty_chat_questions"]
 monty: [aa=1]no one could predict,
-monty: [aa=1]that the unique combination of subatnaces
+monty: [aa=1]that the unique combination of substances
 monty: [aa=1]you ingested last night,
 monty: [aa=2]could have had *any* adverse effect,
 monty: [aa=1]let alone this one
@@ -99,7 +99,7 @@ leave --All--
 [style name="monty_chat_questions"]
 label you love the city?
 monty: [aa]i love the city
-monty: [aa]<its got a certian jennay say qwa/every smell has a million stories/hope we all die in a heat wave here/20 traffic lanes on every road/smells like asphalt and profit>
+monty: [aa]<its got a certain jennay say qwa/every smell has a million stories/hope we all die in a heat wave here/20 traffic lanes on every road/smells like asphalt and profit>
 monty: heh, what about you bub?
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 [music path="res://sounds/ostchoices.wav" fade="0.2" volume="0.0"]

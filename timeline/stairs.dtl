@@ -79,7 +79,7 @@ elif {CurrentRun.Luck} > 2.0:
 		- built <alternatively/different> | [if {Lifetime.NumRuns} >= 3.0]
 			monty: heh, guess ur right bro
 			join shishi (bigbody) rightmost
-			shishi: [aa]hey yeah just wanted to but in and say
+			shishi: [aa]hey yeah just wanted to butt in and say
 			[music fade="0.2" volume="0.0"]
 			update shishi center [move_time="0.4"]
 			shishi (main): [aa]i would normally totally wreck ur shit
