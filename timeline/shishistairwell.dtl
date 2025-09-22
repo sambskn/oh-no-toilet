@@ -1,0 +1,94 @@
+[style name="monty_chat_questions"]
+[music path="res://sounds/ost8-shishicast.wav" fade="0.0" volume="-0.9"]
+[background arg="res://bgs/podcast.png" fade="0.4"]
+join shishi (bigbody) center [animation="Bounce In" wait="true"]
+shishi: [aa][mood=podcast_intro]ay what up its ya boy shishi
+[sound path="res://sounds/woohclap.wav" volume="0.0"]
+shishi: [aa][mood=podcast_intro]back with another salacious pod
+shishi: [aa][mood=podcast_intro]yeah welcome back to triple S!
+shishi: [aa][mood=podcast_intro]shishi's sumo stariwell!
+[sound path="res://sounds/woohclap.wav" volume="0.0"]
+update shishi (main) right
+shishi: [aa][mood=podcast_intro]got the boys here, you already know
+shishi: [aa][mood=podcast_intro]though for our listeners who
+shishi: [aa][mood=podcast_intro]wernt in the stairs with us 20 sec ago,
+shishi: [aa][mood=podcast_intro]could you tell us a little about ur sumo?
+update shishi leftmost
+join monty right
+monty: [aa]hey its me monty im the dog im a pusher thruster
+[sound path="res://sounds/woohclap.wav" volume="0.0"]
+[wait time="0.2"]
+update shishi left
+update monty rightmost
+shishi: [mood=podcast_intro]thank you for being here monty
+shishi: [aa][mood=podcast_intro]just gonna interject [mood=podcast_ad] real quick-
+shishi: [mood=podcast_intro]got a word from our sponsor
+[sound path="res://sounds/jongle.wav" volume="-1.9000000000000001"]
+shishi: [mood=podcast_ad]horse piss energy
+[sound path="res://sounds/horse.wav" volume="0.0"]
+shishi: [mood=podcast_intro]you know they promise to put at least
+shishi: a[mood=podcast_ad] horse of energy[mood=podcast_intro] in each one?
+update shishi leftmost
+update monty right
+monty: wow
+update shishi left
+update monty rightmost
+shishi: [mood=podcast_intro]yeah and so much creatine
+shishi: [mood=podcast_intro]that your wife will be like
+shishi: [mood=angry]'babe i want a divorce
+shishi: [mood=angry]i want you to be with hotter peeps
+shishi: [mood=angry]dont worry about the kids
+shishi: [mood=angry]i will raise and isolate them
+shishi: [mood=angry]you just focus on your sumo,
+shishi: [mood=angry]drinking beer,
+shishi: [mood=podcast_ad]and horse piss'
+shishi: [mood=podcast_intro]thats what my wife said
+shishi: [mood=podcast_intro]anyway you were saying?
+update shishi leftmost
+update monty right
+monty: yeah im here with my boy
+[sound path="res://sounds/woohclap.wav" volume="0.0"]
+monty: say what up
+if {Lifetime.PodcastGuest} == true:
+	shishi: hey wait you were on this show already
+	shishi: i remeber you talking about piss and shit
+	monty: that does sound like you
+	shishi: sorry, no repeat guests
+	shishi: nothing personnell kid
+	[clear time="0.2" portraits="false" music="false" background="false" positions="false" style="false"]
+	leave monty [animation="Slide Out Right" length="0.2"]
+	update shishi (bigbody) center [animation="Tada" move_time="0.4"]
+	[wait time="0.5"]
+	[style name="narration"]
+	[sound path="res://sounds/crush.wav" volume="-1.4000000000000001"]
+	[wait time="0.4"]
+	shishi give ya the ol 1-2
+	life about to flash before ur eyes
+	but shishi is faster
+	theres just a boom[pause=0.5] and then nothing[pause]
+	[clear time="0.2" portraits="false" music="false" background="false" positions="false" style="false"]
+	jump game_over/
+[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+- i dont wanna die
+- ay its ya boy[br]i like to piss
+	shishi: [mood=podcast_intro]you also like to shit tho?
+	[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+	- fo sho
+	- oh yeah baby
+	shishi: [mood=podcast_intro]haha yeah
+shishi: [mood=podcast_intro]cool cool whatever
+shishi: [mood=podcast_intro]anyway bye
+[clear time="0.4"]
+[wait time="0.5"]
+[style name="narration"]
+you guested on a podcast
+thats the worst thing anyone can do
+[clear time="0.2" portraits="false" music="false" background="false" positions="false" style="false"]
+[wait time="0.3"]
+[sound path="res://sounds/unlucky.wav" volume="0.0"]
+luck decreased by 30!
+that seems like too much!
+set {CurrentRun.Luck} -= 30.0
+set {Lifetime.PodcastGuest} = true
+[clear time="0.2"]
+jump game_over/

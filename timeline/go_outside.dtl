@@ -1,15 +1,15 @@
-[music path="res://sounds/ost4.wav" fade="0.0" volume="0.0"]
+[music path="res://sounds/ost4.wav" fade="0.9" volume="-1.3"]
 [background arg="res://bgs/montysittingnear door.png" fade="0.0"]
 [style name="narration"]
-you approach the door
-monty there
+[aa]you approach the door
+[aa]monty there
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 [style name="monty_chat_questions"]
 join monty right
-monty: sup i see you decided to party with the big dogs
-monty: lets go piss or shit
-monty: i hope theres a cop we can piss or shit on
-monty: i can say that because im a dog
+monty: [aa]sup i see you decided to party with the big dogs
+monty: [aa]lets go <piss or shit/piss or shit/shit up the piss/piss or shit/piss a shit/shit and or piss/pip or shiss>
+monty: [aa]i hope theres a cop we can piss or shit on
+monty: [aa]<i can say that because im a dog/jk i respect piss too much to waste it on em/jk if i dont piss rn my blood will turn 2 piss/no law against a dog doing that>
 [clear time="1.0" music="false" background="false" positions="false" style="false"]
 [music path="res://sounds/ost3.wav" fade="0.0" volume="0.0"]
 [background arg="res://bgs/montyneardoor.png" fade="0.0"]
@@ -18,45 +18,64 @@ monty: i can say that because im a dog
 [style name="narration"]
 [background arg="res://bgs/blur.png" fade="0.0"]
 \door opens, dog and you exit to hallway
+[clear time="0.1" portraits="false" music="false" background="false" positions="false" style="false"]
+[wait time="0.1"]
 [style name="monty_chat_questions"]
 join monty rightmost
 monty: not a good place to toilet
 monty: frowned upon
 [clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+[music path="res://sounds/ostchoices.wav" fade="0.0" volume="0.0"]
 - agree
+	[music fade="0.2" volume="0.0"]
 - disagree
 	if {CurrentRun.Luck} >= 12.0:
+		[music fade="0.2" volume="0.0"]
 		monty: well yeah you're so lucky you could do it
 		monty: thats what luck is
 		monty: the will and warrant to waste without worry
 		monty: godspeed you beautiful disaster
 		monty: i cant watch you do this though
 		leave monty [animation="Bounce Out" wait="true"]
-		[clear time="0.3" portraits="false" background="false" positions="false" style="false"]
+		[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+		[wait time="0.3"]
 		[sound path="res://sounds/lucky.wav" volume="0.0"]
 		[style name="narration"]
 		you paint the hallway with your passion
+		[sound path="res://sounds/pissing.wav" volume="-3.0"]
 		a few neighbors notice,
 		emerging from the gloom of their dim lives,
 		bearing witness to your craft, your divine work
-		[music path="res://sounds/ost4.wav" fade="0.0" volume="0.0"]
+		[sound path="res://sounds/woohclap.wav" volume="0.0"]
+		[wait time="0.5"]
 		applause breaks out but thats not why ur here
+		[music path="res://sounds/ost4.wav" fade="0.0" volume="0.0"]
 		ur here to defy expectations
 		to push the overton window
+		[sound path="res://sounds/woohclap.wav" volume="0.0"]
 		to help society advance to something better
 		thank you
-		[clear time="5.0"]
+		set {Lifetime.PissCount} += 1.0
+		set {Lifetime.HallwayArtist} = true
+		[sound path="res://sounds/woohclap.wav" volume="0.0"]
+		[wait time="0.5"]
+		[clear time="1.5" step="false"]
 		jump game_over/
 	else:
 		monty: haha good one
-		monty: .[pause=0.5] .[pause=0.5] .[pause=0.5] never again.[pause=0.5] .[pause=0.5] .[pause=0.5] 
+		monty: .[pause=0.5] .[pause=0.5] .[pause=0.5] never again.[pause=0.5] .[pause=0.5] .[pause=0.5]
+		[music fade="0.5" volume="0.0"]
 - agree to disagree
 	monty: yeah \:)
 	monty: no need to argue
 - disagree to agree
+	[music fade="0.2" volume="0.0"]
+	[sound path="res://sounds/unlucky.wav" volume="0.0"]
+	[wait time="0.3"]
 	monty: classic fascist tactic
 	monty: go piss with someone else bootlicker
 	[clear time="0.5" music="false" positions="false" style="false"]
+	[wait time="0.5"]
 	[style name="narration"]
 	[sound path="res://sounds/unlucky.wav" volume="0.0"]
 	luck decreased by 5! <thats on you!/u know what u did/zowie mama!>
@@ -70,13 +89,16 @@ label how we getting out
 [style name="narration"]
 how we getting outside?
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+[music path="res://sounds/ostchoices.wav" fade="0.0" volume="0.0"]
 [style name="monty_chat_questions"]
 - elevator
+	[music fade="0.4" volume="0.0"]
 	[style name="narration"]
 	elevator? sure! stairs it is!
 	[clear time="1.0"]
 	jump stairs/
 - stairs
+	[music fade="0.4" volume="0.0"]
 	[style name="narration"]
 	why not!
 	[clear time="1.0"]

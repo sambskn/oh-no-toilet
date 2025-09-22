@@ -25,7 +25,9 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"monty": "res://chars/monty.dch"
+"kotozakura": "res://chars/kotozakura.dch",
+"monty": "res://chars/monty.dch",
+"shishi": "res://chars/shishi.dch"
 }
 directories/dtl_directory={
 "alley": "res://timeline/alley.dtl",
@@ -35,16 +37,19 @@ directories/dtl_directory={
 "go_to_toilet": "res://timeline/go_to_toilet.dtl",
 "lobby": "res://timeline/lobby.dtl",
 "opening": "res://timeline/opening.dtl",
+"secert_base": "res://timeline/secert_base.dtl",
+"shishistairwell": "res://timeline/shishistairwell.dtl",
 "stairs": "res://timeline/stairs.dtl",
 "start": "res://timeline/start.dtl",
+"stats": "res://timeline/stats.dtl",
 "temp_game_end": "res://timeline/temp_game_end.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.05
-text/initial_text_reveal_skippable=true
+text/initial_text_reveal_skippable=false
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
-text/autoadvance_per_character_delay=0.1
+text/autoadvance_per_character_delay=0.05
 text/autoadvance_ignored_characters_enabled=true
 audio/max_channels=4.0
 animations/join_default_length=0.5
@@ -54,15 +59,15 @@ animations/leave_default_wait=true
 animations/cross_fade_default_length=0.5
 choices/autofocus_first=true
 choices/delay=0.2
-choices/reveal_delay=0
+choices/reveal_delay=0.1
 choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
-animations/join_default="Instant In"
-animations/leave_default="Zoom Out"
+animations/join_default="Slide In Left"
+animations/leave_default="Slide Out Right"
 animations/cross_fade_default="Fade Cross"
 text/autopauses={}
-layout/style_list=["res://styles/main_menu.tres", "res://styles/credits.tres", "res://styles/narration.tres", "res://styles/monty_chat_questions.tres"]
+layout/style_list=["res://styles/main_menu.tres", "res://styles/credits.tres", "res://styles/narration.tres", "res://styles/monty_chat_questions.tres", "res://styles/stats.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 variables={
@@ -71,8 +76,13 @@ variables={
 "Luck": 0
 },
 "Lifetime": {
+"HallwayArtist": false,
+"IntroSeen": false,
 "KnowsAboutSaftey": false,
-"NumRuns": 0
+"NumRuns": 0,
+"OzekisGrace": false,
+"PissCount": 0,
+"PodcastGuest": false
 }
 }
 text/autoadvance_enabled=false
@@ -85,6 +95,7 @@ translation/save_mode=0
 translation/add_separator=false
 save/default_slot="Main"
 save/autosave=true
+text/autoadvance_fixed_delay=0.55
 
 [display]
 

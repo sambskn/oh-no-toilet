@@ -1,41 +1,112 @@
 [music path="res://sounds/ost2.wav" fade="0.0" volume="0.0"]
 [style name="narration"]
 [background arg="res://bgs/walkwaydispo.png" fade="0.0"]
-you follow a thin sidewalk off the main street
-in between two buildings, away from voyeurs
-this is a place you could picture yourself pissing in
-or shitting!
+[aa]you follow a thin sidewalk off the main street
+[aa]in between two buildings, away from voyeurs
+[aa]this is a place you could picture yourself pissing in
+[aa]or shitting!
 label ready?
 [style name="narration"]
 ready to unleash?
+[music fade="0.3" volume="0.0"]
 [clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
 [wait time="0.1"]
+[music path="res://sounds/ostchoices.wav" fade="0.0" volume="0.0"]
 [style name="monty_chat_questions"]
 - unleash the[br]current
+	[music fade="0.3" volume="0.0"]
 	if {CurrentRun.Luck} >= 6.0:
+		[sound path="res://sounds/lucky.wav" volume="0.0"]
+		[wait time="0.3"]
 		[style name="narration"]
 		you slip off your utility kilt
-		(a tasteful, yet sensual beige garment,
-		handmade by artisan-trained prisoners,
-		in a death camp/dropshipping factory,
-		located in newly admitted Western Idaho)
+		[aa](a tasteful, yet sensual beige garment,
+		[aa]handmade by artisan-trained prisoners,
+		[aa]in a death camp/dropshipping factory,
+		[aa]located in newly admitted 54th state, West Idaho)
+		[aa](it was a gift btw)
 		you get ready to let everything you can
 		out of all your holes
-		[clear time="0.5" portraits="false" background="false" positions="false" style="false"]
-		[sound path="res://sounds/lucky.wav" volume="0.0"]
-		you did it - you splattered the concrete
-		this is the reward for your efforts
-		the reward that comes with all vandalism
-		a cheap fleeting thrill for you,
-		but nevertheless,
-		an important spark in the flame of revolution
-		this is an ending to this game
+		[clear time="0.3" step="false" portraits="false" music="false" background="false" positions="false" style="false"]
+		[wait time="0.3"]
+		[sound path="res://sounds/pissing.wav" volume="0.0"]
+		[aa]you did it - you splattered the concrete
+		[aa]this is the reward for your efforts
+		[music path="res://sounds/shatterost.wav" fade="0.5" volume="0.0"]
+		[aa]the reward that comes with all vandalism
+		[aa]a cheap fleeting thrill for you,
+		[aa]but nevertheless,
+		[aa]an important spark in the flame of revolution
+		[aa]this is an ending to this game
 		but it is not the end of your work
+		[clear time="0.3" step="false" portraits="false" music="false" background="false" positions="false" style="false"]
+		set {Lifetime.PissCount} += 1.0
+		[wait time="0.3"]
 		jump game_over/
 	else:
+		[music fade="0.3" volume="0.0"]
+		[wait time="0.3"]
+		[sound path="res://sounds/unlucky.wav" volume="0.0"]
+		[wait time="0.2"]
 		# not lucky enough to poop
 		monty: uh oh here comes someone
-		jump temp_game_end/
+		leave monty
+		join kotozakura (body) right
+		[music path="res://sounds/ost4.wav" fade="0.0" volume="0.0"]
+		kotozakura: hehe not your lucky day cowboy
+		kotozakura: your god does not love you
+		kotozakura (main): any last words?
+		[music fade="0.3" volume="0.0"]
+		[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+		[wait time="0.3"]
+		[music path="res://sounds/ostchoices.wav" fade="0.3" volume="0.0"]
+		- i just wanted to[br]piss on a cop...
+			[music fade="0.3" volume="0.0"]
+			kotozakura (main): why didnt you say so?
+			kotozakura (main): lets go find a cop
+			[clear time="0.3" portraits="false" music="false" background="false" positions="false"]
+			[wait time="0.3"]
+			[sound path="res://sounds/lucky.wav" volume="0.0"]
+			[style name="narration"]
+			the ozeki's grace! luck increased by 2!
+			set {Lifetime.OzekisGrace} = true
+			set {CurrentRun.Luck} += 2.0
+			[sound path="res://sounds/lucky.wav" volume="0.0"]
+			kotozakura joined your party!
+			[sound path="res://sounds/unlucky.wav" volume="0.0"]
+			your frame buckles as he steps near
+			monty has already escaped with his life
+			the grabitational pull is crushing you
+			[sound path="res://sounds/uh.wav" volume="0.0"]
+			[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+			[wait time="0.3"]
+			[style name="monty_chat_questions"]
+			kotozakura (body): whats wrong buddy
+			[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+			[wait time="0.3"]
+			[style name="narration"]
+			a noise escapes
+			[sound path="res://sounds/sqee.wav" volume="0.0"]
+			your mass is absorbed into the host
+			nice
+			jump game_over/
+		- people who ride[br]lime scooters[br]on sidewalks[br]should be stopped
+			[music fade="0.3" volume="0.0"]
+			kotozakura: yeah fair enough
+			kotozakura: however
+			kotozakura: truth cannot absolve you of fate
+		- ruh roh
+			kotozakura: indeed
+			[music fade="0.3" volume="0.0"]
+		[clear time="0.3" step="false"]
+		[wait time="0.3"]
+		[sound path="res://sounds/crush.wav" volume="0.0"]
+		[wait time="0.3"]
+		[style name="narration"]
+		theres a flash of pain and then nothing else
+		reports would later confirm it looked rad
+		nice
+		jump game_over/
 - consult dog
 	join monty right
 	monty: i dont think you got a choice bub
@@ -45,7 +116,9 @@ ready to unleash?
 	monty: <idk/im a dog not a dog-tor haha lol/shrug emoji/haha ill piss on your grave ;)>
 	jump ready?
 - dont
+	[music fade="0.3" volume="0.0"]
 	[clear time="0.3" text="false" style="false"]
+	[wait time="0.3"]
 	[style name="narration"]
 	[sound path="res://sounds/unlucky.wav" volume="0.0"]
 	you really should have let loose

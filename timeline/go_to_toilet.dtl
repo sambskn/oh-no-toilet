@@ -1,37 +1,53 @@
 [music path="res://sounds/ost2.wav" fade="0.0" volume="0.0"]
 [background arg="res://bgs/handondoor.png" fade="0.0"]
 [style name="narration"]
-you go to the toilet room door
-[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
-i mean the bathroom door
-[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
-hand on the door
-[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
-ready to open it
-[clear time="1.0" portraits="false" background="false" positions="false" style="false"]
+[aa=1]you sprint to the toilet room
+[aa=0.7]unaware of how lady luck may play their hand
+[aa=0.5]you grab the door handle
+[aa=0.5]a pause - is this right?
+[aa=0.3]can you open this door?
+[music fade="0.4" volume="0.0"]
+[clear time="0.2" portraits="false" music="false" background="false" positions="false" style="false"]
+[wait time="0.3"]
+[music fade="0.2" volume="0.0"]
 [sound path="res://sounds/lucky.wav" volume="0.0"]
-if {CurrentRun.Luck} > 5.0:
-	and you stop
-	luckiness overwhelms you
-	the bathroom fuckin sucks
-	today you can piss and shit outside
-	without consequence!
+[wait time="0.3"]
+if {CurrentRun.Luck} > 10.0:
+	[music path="res://sounds/hypershatter.wav" fade="0.0" volume="0.0"]
+	[aa=1]a lucky feeling washes over you,
+	and the gamblers intuition sparks!
+	[aa=0.5]you intuit,
+	[aa=0.5]luckily,
+	[aa=1]that the bathroom doesnt hold the answers you seek
+	[aa=1]"toilet bowls are the opiate of the masses"
+	[aa=1]you mutter under your breath
+	you thank your god that you could divine this
+	[aa=1]seemingly for no reason
+	[aa=1]god wants you to expel waste outside,
+	[aa=1]returning nutrients to the cycle of life
 	[sound path="res://sounds/lucky.wav" volume="0.0"]
+	[wait time="0.3"]
 	can now go outside!
 	set {CurrentRun.CanGoOutside} = true
 	[clear time="1.0"]
+	[wait time="0.3"]
 	jump go_outside/
-and you do!
-[clear time="1.0" portraits="false" music="false" positions="false" style="false"]
+else:
+	[style name="narration"]
+	[aa]ay we can use doors in this game nice
 [sound path="res://sounds/sqee.wav" volume="0.0"]
-[background arg="res://bgs/toilet.png" fade="0.0"]
-wow thats the toilet
+[background fade="0.4" transition="Swipe Right To Left"]
+[background arg="res://bgs/toilet.png" fade="0.4" transition="Push Right"]
+[aa=1]wow thats the toilet
 label what you do
 [music path="res://sounds/ost3.wav" fade="0.0" volume="0.0"]
 what do you do?
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 [style name="monty_chat_questions"]
 - go outside | [if {CurrentRun.CanGoOutside} == true]
+	[music fade="0.3" volume="0.0"]
+	[sound path="res://sounds/lucky.wav" volume="0.0"]
+	[wait time="0.3"]
 	[style name="narration"]
 	you decide to go outside
 	shitting inside sucks
@@ -39,14 +55,20 @@ what do you do?
 	everything sucks
 	jump go_outside/
 - inspect toilet
-	[background arg="res://bgs/toilet2.png" fade="0.0"]
+	[music fade="0.3" volume="0.0"]
+	[background arg="res://bgs/toilet2.png" fade="0.3" transition="Push Up"]
+	[wait time="0.3"]
+	[sound path="res://sounds/unlucky.wav" volume="0.0"]
+	[wait time="0.3"]
 	[style name="narration"]
-	reminds you of <hole/home/hell/a mothers touch>
+	oh god this brings back too much from last night
+	reminds you of <hole/home/hell/a mothers touch/dick cheney/newt gingrinch>
 	that cant be good
 	[clear time="0.3" text="false" portraits="false" background="false" positions="false" style="false"]
 	[sound path="res://sounds/unlucky.wav" volume="0.0"]
-	luck decrease by 1! <shoot/drat/darn/ahh nuts/crapoli/fuck>!
-	set {CurrentRun.Luck} -= 1.0
+	luck decrease by 2! <shoot/drat/darn/ahh nuts/crapoli/fuck>!
+	set {CurrentRun.Luck} -= 2.0
+	[background arg="res://bgs/toilet.png" fade="0.3" transition="Push Down"]
 	jump what you do
 - consult dog | [if {CurrentRun.CanGoOutside} == false]
 	[style name="monty_chat_questions"]

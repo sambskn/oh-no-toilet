@@ -1,7 +1,66 @@
+if {Lifetime.IntroSeen} == true:
+	# skipping intro
+	[style name="main_menu"]
+	jump intro done
+[sound path="res://sounds/sqee.wav" volume="0.0"]
+[background arg="res://bgs/sidewalknight.png" fade="0.5"]
+[wait time="0.5"]
 [style name="main_menu"]
+[sound path="res://sounds/swish1.wav" volume="0.0"]
+join kotozakura (body) right [animation="Slide In Left" wait="true"]
+[wait time="0.5"]
+[sound path="res://sounds/swish2.wav" volume="0.0"]
+join shishi (bigbody) left [animation="Slide In Right" length="0.4" wait="true"]
+[wait time="0.5"]
+[sound path="res://sounds/swish3.wav" volume="0.0"]
+join monty center [animation="Slide In Up" wait="true"]
+[background fade="0.4"]
+leave kotozakura [animation="Slide Out Left"]
+leave shishi [animation="Slide Out Right"]
+leave monty [animation="Slide Out Down" wait="true"]
+# start intro music 1
+[music path="res://sounds/intro.wav" fade="0.0" volume="0.0"]
+[wait time="1.5"]
+[background arg="res://bgs/toilet.png" fade="1.5" transition="Push Left"]
+[wait time="1.5"]
+[background fade="1.5" transition="Push Left"]
+[wait time="1.5"]
+[background arg="res://bgs/toilet2.png" fade="1.5" transition="Push Left"]
+[wait time="1.5"]
+[background fade="1.0" transition="Push Left"]
+[wait time="0.1"]
+[music path="res://sounds/intro2.wav" fade="0.0" volume="0.0"]
+[wait time="1.5"]
+# flashframe
+[background arg="res://bgs/montywindow.png" fade="0.75" transition="Push Left"]
+[wait time="0.75"]
+join shishi (main) right [animation="Slide In Left" length="1.5" mirrored="true"]
+[background fade="0.75" transition="Push Left"]
+[wait time="0.75"]
+# flashframe
+join kotozakura (main) right [animation="Slide In Left" length="1.5" mirrored="true"]
+[background arg="res://bgs/montydoor.png" fade="0.75" transition="Push Left"]
+leave shishi [animation="Slide Out Right" length="0.3" mirrored="true"]
+[wait time="0.75"]
+[background fade="0.75" transition="Push Left"]
+leave kotozakura [animation="Slide Out Right" length="0.3" mirrored="true"]
+[wait time="0.75"]
+# flashframe
+[background arg="res://bgs/monty next window.png" fade="0.75" transition="Push Left"]
+[wait time="0.75"]
+set {Lifetime.IntroSeen} = true
+label intro done
+[background fade="0.75" transition="Push Left"]
+[wait time="0.55"]
+if {Lifetime.NumRuns} == 0.0:
+	[background arg="res://menubg/1.png" fade="0.35" transition="Push Right"]
+elif {CurrentRun.CanGoOutside} == true:
+	[background arg="res://menubg/2.png" fade="0.35" transition="Push Right"]
+else:
+	[background arg="res://menubg/3.png" fade="0.35" transition="Push Right"]
+[sound path="res://sounds/crush.wav" volume="-1.6"]
+[wait time="1.5"]
 [music path="res://sounds/ost3.wav" fade="0.0" volume="0.0"]
-[background arg="res://bgs/randombg.png" fade="0.0"]
-oh no toilet!
 - start | [if {Lifetime.NumRuns} == 0.0]
 	welcome...
 	[clear time="1.0"]
@@ -10,6 +69,9 @@ oh no toilet!
 	again?[pause=1.0] fr?
 	[clear time="1.0"]
 	jump opening/
+- stats | [if {Lifetime.NumRuns} > 0.0]
+	[clear time="1.0"]
+	jump stats/
 - credits
 	[clear time="1.0"]
 	jump credits/

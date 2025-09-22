@@ -4,102 +4,163 @@
 we open on da city
 so great to be here
 \if ur lucky ;)
-if {Lifetime.NumRuns} == 0.0:
+if {Lifetime.NumRuns} >= 3.0:
+	<but 4 u? same shit, different day/but lets cut the shit and get to pissin/but thats only a wet dream for you>
+	if {Lifetime.NumRuns} < 4.0:
+		just like every day this month,
+		your body starts getting ready to krakatoa at the crack of dawn
+		no doctor can help you
+		and mothers/children avoid your gaze
+	ur bathroom toilet was <clogged beyond comprehension/closed by the EPA/released into low earth orbit/shattered into 1000 pieces>[n+] YEARS AGO
+	pooping outside is the only kindness you can perform as you are,
+	and its your only option now
+	[clear time="0.5"]
+	if {CurrentRun.CanGoOutside} != true:
+		set {CurrentRun.CanGoOutside} = true
+	[wait time="0.5"]
+	jump go_outside/
+if {Lifetime.NumRuns} <= 0.0:
+	# setting initial luck
 	wait are you lucky?
-	[clear time="1.0" portraits="false" background="false" positions="false" style="false"]
+	[music fade="0.3" volume="0.0"]
+	[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 	[style name="monty_chat_questions"]
+	[music path="res://sounds/ostchoices.wav" fade="0.0" volume="0.0"]
+	# first choice
 	- yeah
-		[style name="narration"]
-		nahhhhhh
+		[music fade="0.3" volume="0.0"]
+		[sound path="res://sounds/unlucky.wav" volume="0.0"]
 		set {CurrentRun.Luck} = -1.0
+		[style name="narration"]
+		nahhhhhh shut up dude
 	- a little *smirk*
+		[music fade="0.3" volume="0.0"]
+		[sound path="res://sounds/lucky.wav" volume="0.0"]
 		set {CurrentRun.Luck} = 1.0
 		[style name="narration"]
-		ok sure bud why not
+		ok sure you lil rascal why not
 	- middle choice
+		[style name="narration"]
+		ok nothing doing
+		continue with the luck god* gave you
+		* there is no god**
+		** there is also no free will or luck***
+		*** this is a video game
 	- luck doesnt exist
 		[style name="narration"]
-		lucky you this isnt a vindictive game
+		yeah true
+		luckily, recognizing that fact nets you 1 luck
+		[music fade="0.3" volume="0.0"]
+		[sound path="res://sounds/lucky.wav" volume="0.0"]
+		[wait time="0.3"]
 		set {CurrentRun.Luck} = 1.0
 	- no
 		set {CurrentRun.Luck} = -1.0
 		[style name="narration"]
 		yeah you aint lucky
+	# luck set, moving on
+	[music fade="0.3" volume="0.0"]
 	[music path="res://sounds/ost1.wav" fade="0.0" volume="0.0"]
 	[style name="narration"]
-if {CurrentRun.Luck} == 0.0:
-	you btw, are not lucky
-	only lucky in that you have a dog
-elif {CurrentRun.Luck} < -3.0:
-	you are what we call in the business\:
-	'moderately to severely unlucky'
-	good luck with that
-	you said you had a dog you could ask for advice?
-elif {CurrentRun.Luck} < -1.0:
-	'noticeably unlucky' is the name of your caste
-	not one of the good ones, sadlyw
-	heres a dog anyway
-elif {CurrentRun.Luck} <= 2.0:
-	you could be luckier
-	but who's compliainin
-	not you
-	even got a dog
-elif {CurrentRun.Luck} <= 100.0:
-	for some reason you are luckier than most
-	seems unfair [pause=1.0] probably is!
-	where is ur dog btw?
+else:
+	sometimes it feels like ur trapped here
+label you woke up
+you didnt wake up on purpose
+dehydration and nausea teamed up,
+attached your nipples to a car battery and  started the engine
+ur moving with urgency
+something(s) inside you need to get out pronto
+# monty entrance
 [sound path="res://sounds/sqee.wav" volume="0.0"]
-oh here he come
 join monty right
 [style name="monty_chat_questions"]
 monty: hi its me the dog
-monty: i........
-monty: i love you . . .[pause=0.5]<3
+monty: damn bro, <u look like a day old shit danish/u smell like tuberclulosis!/u remind me of a corpse i saw/u look like the cum rag's cum rag>
+monty: ur having crazy bad luck lately bro
+monty: every day you wake up about to vom dot com
+[clear time="0.1" portraits="false" music="false" background="false" positions="false" style="false"]
+[wait time="0.2"]
+[style name="narration"]
+[sound path="res://sounds/wah.wav" volume="0.0"]
+huh maybe this is the result your own actions??
+[clear time="0.1" portraits="false" music="false" background="false" positions="false" style="false"]
+[wait time="0.2"]
+[style name="monty_chat_questions"]
+monty: [aa=1]no one could predict,
+monty: [aa=1]that the unique combination of subatnaces
+monty: [aa=1]you ingested last night,
+monty: [aa=2]could have had *any* adverse effect,
+monty: [aa=1]let alone this one
+monty: [aa=1]best not to dwell on it[pause=0.5] \:)[pause]
 leave --All--
 [clear time="1.0" music="false"]
+[music path="res://sounds/shatterost.wav" fade="2.0" volume="-3.0"]
 [background arg="res://bgs/monty next window.png" fade="0.0"]
 [style name="monty_chat_questions"]
 label you love the city?
-monty: i love the city
-monty: <even though it dont love me back/*sniff* its got that stank that break the bank/kinda place that makes you miss dyin>
+monty: [aa]i love the city
+monty: [aa]<its got a certian jennay say qwa/every smell has a million stories/hope we all die in a heat wave here/20 traffic lanes on every road/smells like asphalt and profit>
 monty: heh, what about you bub?
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
-- tha city can blow me
+[music path="res://sounds/ostchoices.wav" fade="0.2" volume="0.0"]
+- tha city [br]can blow me
+	[music fade="1.0" volume="0.0"]
 	monty: aint that the truth
 	if {CurrentRun.Luck} < 1.0:
-		monty: i will not blow you tho
+		monty: sadly i cant blow you
 		monty: i am a dog
 		monty: well,[pause=0.5] so [pause=0.25]
 - im unlucky & [br]blaming others | [if {CurrentRun.Luck} < 0.0]
 	monty: haha lol sucks to suck
-- big up da city mon | [if {CurrentRun.Luck} > 0.0]
+- im lucky and think[br]city life is ok | [if {CurrentRun.Luck} > 0.0]
 	monty: why are you saying that
+	monty: luck isnt real
+	monty: whatever
 - you are a dog
 	monty: \:) yeah [pause=0.5] i guess i am
 	[style name="narration"]
+	[music fade="0.2" volume="0.0"]
 	[sound path="res://sounds/lucky.wav" volume="0.0"]
 	luck increase by 10! <that seems like a lot!/really???/why not?>
 	set {CurrentRun.Luck} += 10.0
 	[style name="monty_chat_questions"]
+- weve been[br]here before | [if {Lifetime.NumRuns} >= 2.0]
+	[music fade="0.3" volume="0.0"]
+	[music path="res://sounds/ost3.wav" fade="0.0" volume="0.0"]
+	monty: so you finally woke up to the loops huh
+	monty: was wondering when id have my partner back
+	monty: its been hard friend,
+	monty: maybe we can escape yet
+	[clear time="0.2" step="false" portraits="false" music="false" positions="false" style="false"]
+	[wait time="0.3"]
+	jump secert_base/
+label how we doing
 monty: anyway how we doin?
+[music fade="0.3" volume="0.0"]
+[music path="res://sounds/ostchoices.wav" fade="0.0" volume="0.0"]
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 - gotta poop/piss
 - gotta piss and shit
 - really gotta shit
 - mostly full of piss
+[music fade="0.2" volume="0.0"]
 monty: <oh of course}/most definitely/that is normal>
 label go to the toilet
 monty: you should go to the toilet
+[music fade="0.1" volume="0.0"]
+[music path="res://sounds/hypershatter.wav" fade="0.0" volume="0.0"]
 [clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
 - yeah
 	monty: yay \:)
 - no
 	monty: shut up and go >\:(
 	[style name="narration"]
+	[music fade="0.3" volume="0.0"]
 	[sound path="res://sounds/unlucky.wav" volume="0.0"]
 	luck decrease by 1!
 	set {CurrentRun.Luck} += -1.0
 	[style name="monty_chat_questions"]
+	[music path="res://sounds/ost4.wav" fade="0.0" volume="0.0"]
 if {CurrentRun.CanGoOutside} == true:
 	[style name="narration"]
 	right, the toilet, the great outdoors

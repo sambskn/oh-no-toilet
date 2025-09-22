@@ -1,0 +1,100 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"sound_mood_default": "Mood 1",
+"sound_moods": {
+"Mood 1": {
+"mode": 1,
+"name": "Mood 1",
+"pitch_base": 0.9,
+"pitch_variance": 0.3,
+"skip_characters": 3.0,
+"sound_path": "res://sounds/uh.wav",
+"volume_base": -0.30000000000000004,
+"volume_variance": 0.0
+},
+"angry": {
+"mode": 1,
+"name": "angry",
+"pitch_base": 0.8,
+"pitch_variance": 0.2,
+"skip_characters": 2.0,
+"sound_path": "res://sounds/uh.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+},
+"happy": {
+"mode": 1,
+"name": "happy",
+"pitch_base": 1.4,
+"pitch_variance": 0.3,
+"skip_characters": 1.0,
+"sound_path": "res://sounds/uh.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+},
+"podcast_ad": {
+"mode": 1,
+"name": "podcast_ad",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 0.0,
+"sound_path": "res://sounds/uh.wav",
+"volume_base": -0.1,
+"volume_variance": 0.0
+},
+"podcast_intro": {
+"mode": 1,
+"name": "podcast_intro",
+"pitch_base": 1.4,
+"pitch_variance": 0.1,
+"skip_characters": 1.0,
+"sound_path": "res://sounds/wah.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+},
+"podcast_two": {
+"mode": 1,
+"name": "podcast_two",
+"pitch_base": 1.4,
+"pitch_variance": 0.3,
+"skip_characters": 3.0,
+"sound_path": "res://sounds/wah.wav",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
+"style": ""
+},
+&"default_portrait": "main",
+&"description": "",
+&"display_name": "shishi",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"bigbody": {
+"export_overrides": {
+"image": "\"res://chars/shishifull.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"main": {
+"export_overrides": {
+"image": "\"res://chars/shishi.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "",
+"sound_mood": "Mood 1"
+}
+},
+&"scale": 1.0
+}

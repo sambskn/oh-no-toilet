@@ -4,9 +4,15 @@
 welp its the stairs
 if {CurrentRun.Luck} < 1.0:
 	these usually go well!
+if {Lifetime.NumRuns} > 2.0:
+	if {CurrentRun.Luck} >= 5.0:
+		before you can even remember dads advice your body goes into motion
+		[sound path="res://sounds/swish1.wav" volume="0.0"]
+		[wait time="0.4"]
+		jump ye
 you get ready to go down them
-remember what your dad told you\:
-"never go city you'll die falling down stairs"
+what did dad say about stairs?
+<"city gon throw you down every set of stairs it got until you die"/"ahhhh im falling down the stairs owwwwwe this hurts"/"its NEVER ok to be unlucky near stairs">
 <thanks dad/he never trusted inclines in general/i didn't choose the city dad, it chose me>
 [clear time="1.0" portraits="false" background="false" positions="false" style="false"]
 if {CurrentRun.Luck} <= 1.0:
@@ -14,7 +20,74 @@ if {CurrentRun.Luck} <= 1.0:
 	wow you fell down the stairs and died
 	<darn/not even lucky enough for stairs \:(>
 	jump game_over/
-elif {CurrentRun.Luck} > 1.0:
+elif {CurrentRun.Luck} > 2.0:
 	[sound path="res://sounds/lucky.wav" volume="0.0"]
-	you go down the stairs like normal
+	label ye
+	[aa]you go down the stairs like <{"you practiced,\nbackwards, eyes closed"}/{"u forgot what stairs are\nthat happens tho"}/{"a local, \ntaking all the shortcuts"}/{"sonic the h-hog, lithe\n and graceful"}/{"a drunk slinky, \nbut youve seen worse"}/{"you owe em money\nboom bop kerpow"}/{"an aged automaton, \njoints crying 4 lube"}/{"a toboggan, and\nyou regret this"}/{"BAM\nWOP  POW \n*thwap*\n'oh geez'"}>
+	if {CurrentRun.Luck} > 2.0:
+		[clear time="0.2" portraits="false" music="false" background="false" positions="false" style="false"]
+		[wait time="0.3"]
+		[style name="monty_chat_questions"]
+		join monty right
+		monty: we are both good at stairs
+		monty: i think it is because we both are-
+		[clear time="0.4" portraits="false" music="false" background="false" positions="false" style="false"]
+		- afraid of sumo[br]wrestlers | [if {Lifetime.KnowsAboutSaftey} == true]
+			[sound path="res://sounds/lucky.wav" volume="0.0"]
+			monty: yeah \:) [pause=0.5] always thinkin about em
+			[clear time="0.5" background="false" style="false"]
+			[sound path="res://sounds/wah.wav" volume="0.0"]
+			[music path="res://sounds/ost7.wav" fade="0.0" volume="0.0"]
+			[style name="monty_chat_questions"]
+			join shishi right
+			shishi: ayyy its me shishi
+			shishi: heard we were talking sumo?
+			shishi: i actually host a podcast here
+			shishi: its called sumo in stairwell
+			shishi: i quiz people on their sumo knowledge
+			shishi: and if they get a question wrong...
+			shishi: i make them part of the stairs!
+			[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+			leave shishi
+			[sound path="res://sounds/sqee.wav" volume="0.0"]
+			[style name="narration"]
+			you look at your feet
+			the stairwell is actually a butcher block
+			reinforced concrete acting as a mass grave
+			a mass grave of ignorant pedestrians
+			ground into the steps to pump spotify numbers
+			[clear time="0.1" step="false" portraits="false" music="false" background="false" positions="false"]
+			[sound path="res://sounds/dogyip.wav" volume="0.0"]
+			[wait time="0.1"]
+			[style name="monty_chat_questions"]
+			join monty leftmost
+			# yo1
+			monty: but shishi how do you have the time?
+			# yo
+			monty: surely this cuts into your training?
+			join shishi rightmost
+			shishi: haha yeah but im tryna be the next joe rogan
+			monty: never meet your heroes
+			shishi: anyway lets do this shit get ready
+			[clear time="1.0"]
+			jump shishistairwell/
+		- thinking of dad :)
+			[sound path="res://sounds/unlucky.wav" volume="0.0"]
+			monty: no
+			monty: that is wrong
+			monty: anyway
+		- built <alternatively/different> | [if {Lifetime.NumRuns} >= 3.0]
+			monty: heh, guess ur right bro
+			join shishi (bigbody) rightmost
+			shishi: [aa]hey yeah just wanted to but in and say
+			[music fade="0.2" volume="0.0"]
+			update shishi center [move_time="0.4"]
+			shishi (main): [aa]i would normally totally wreck ur shit
+			shishi (main): but i see ur construction is not the same,[n]anyway have a nice day playboys
+			update shishi (bigbody) leftmost [move_time="0.4"]
+			leave shishi [animation="Slide Out Right" length="0.3" wait="true"]
+			monty: haha classic shishi
+			leave monty [animation="Slide Out Right"]
+	[clear time="0.5" positions="false" style="false"]
+	[wait time="0.5"]
 	jump lobby/

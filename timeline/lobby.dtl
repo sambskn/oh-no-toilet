@@ -1,72 +1,91 @@
 [music path="res://sounds/ost1.wav" fade="0.0" volume="0.0"]
 [background arg="res://bgs/montydoor.png" fade="0.0"]
 [style name="narration"]
-you and the 4 leg poop machine make it to the lobby door
+[aa]you and the 4 leg poop machine make it to the lobby door
 nice
 [clear time="1.0" style="false"]
 [background arg="res://bgs/sidewalknight.png" fade="0.0"]
 [music path="res://sounds/ost6.wav" fade="0.0" volume="0.0"]
 ah[pause=0.2]. [pause=0.2]. [pause=0.2].  da city
+[clear time="0.2" portraits="false" music="false" background="false" positions="false" style="false"]
+[wait time="0.2"]
 [style name="monty_chat_questions"]
 join monty center
 monty: k bro gonna go bust one out check it
 [clear time="0.7" style="false"]
 [background arg="res://bgs/montypiss.png" fade="0.0"]
 [sound path="res://sounds/pissing.wav" volume="0.0"]
-monty: love pissin
+monty: <love pissin/pissin makes me feel good/this is like my job \:)>
 [clear time="1.0" positions="false" style="false"]
 [music path="res://sounds/ost6.wav" fade="0.0" volume="0.0"]
-[background arg="res://bgs/walkingmonty.png" fade="0.5" transition="Swipe Left To Right"]
+[background arg="res://bgs/walkingmonty.png" fade="0.5" transition="Push Right"]
+join monty rightmost
+monty: ayyyy fist bump me bro that shit was tite
+monty: <pissed so much i made a new ocean/i polluted the drinking water!/there really is nobody doin it like me fr>
+monty: ur turn now bud
 label ready to explode?
 [style name="monty_chat_questions"]
 join monty leftmost
-monty: ok you ready to explode now?
+monty: you ready to <explode now/cowabunga/spash mountain/expel liquids>?
+[music fade="0.3" volume="0.0"]
+[music path="res://sounds/ostchoices.wav" fade="0.3" volume="0.0"]
 [clear time="0.5" music="false" background="false" positions="false" style="false"]
 - yeah broski[br]cant wait to [br]piss on a cop
 	join monty right
 	monty: thumbs up!
-	[clear time="0.5"]
+	[music fade="0.3" volume="0.0"]
+	[clear time="0.5" step="false" music="false" positions="false" style="false"]
+	[wait time="0.5"]
 	[sound path="res://sounds/pissing.wav" volume="0.0"]
+	[wait time="0.5"]
 	[style name="narration"]
 	you piss
 	and then shit
-	its every where and it's great
-	if {CurrentRun.Luck} > 1.0:
+	if {CurrentRun.Luck} > 7.0:
 		its every where and it's great
 		this is a good ending
+		set {Lifetime.PissCount} += 1.0
 		[clear time="1.0"]
 		jump temp_game_end/
 	else:
 		[sound path="res://sounds/unlucky.wav" volume="0.0"]
+		[wait time="0.3"]
 		oh wait you were still wearing clothes
 		noooooooo
+		set {Lifetime.PissCount} += 1.0
 		[clear time="1.0"]
 		jump game_over/
 - uhh....[br]im nervous
 	join monty right
 	monty: haha you are a coward
 	monty: lets go down that alleyway then
+	[music fade="0.3" volume="0.0"]
 	leave monty
+	[clear time="0.4" step="false" music="false" positions="false" style="false"]
+	[wait time="0.4"]
 	jump alley/
 - is this safe? | [if {Lifetime.KnowsAboutSaftey} == false]
+	[music fade="0.2" volume="0.0"]
 	[style name="narration"]
 	monty pulls you over to the side of the side walk
 	he pretends to light a cigarette butt from the ground
+	[sound path="res://sounds/swish2.wav" volume="0.0"]
+	[clear time="0.2" portraits="false" music="false" background="false" positions="false" style="false"]
+	[wait time="0.2"]
 	[style name="monty_chat_questions"]
 	join monty right
 	monty: act natural bub
 	monty: cant believe we gortta go over this again
+	[music path="res://sounds/shatterost.wav" fade="0.0" volume="0.0"]
 	monty: yknow weve been city dogs for some time now
 	monty: and since day one weve known the risk
 	monty: the risk that at any moment on these streets...
 	monty: one of grand sumo's finest rikishi
 	monty: could pull up out of nowhere,
 	monty: yorikiri the shit out of us,
-	monty: (no gyoji out here either)
-	monty: breaking 6-7 ribs, minimum,
-	monty: which'll really hurt the weed budget
-	monty: yeah anyway, just don't be unlucky
-	monty: and its fine
+	monty: & blow us apart like a cheap honda
+	monty: they wouldnt even find our corpses
+	monty: just don't be unlucky \:) [pause=0.5] its fine[pause]
 	set {Lifetime.KnowsAboutSaftey} = true
 	[clear time="0.5" portraits="false" background="false" positions="false" style="false"]
 	[sound path="res://sounds/lucky.wav" volume="0.0"]

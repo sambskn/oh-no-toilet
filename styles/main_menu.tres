@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=13 format=3 uid="uid://cwrbgp23aa6b6"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=15 format=3 uid="uid://cwrbgp23aa6b6"]
 
 [ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_p3rc0"]
 [ext_resource type="Script" uid="uid://dadotdnah6arh" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_ywwda"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="3_cqo1n"]
 [ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="4_5haje"]
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="6_dmfum"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="7_rmamb"]
 
 [sub_resource type="Resource" id="Resource_cqo1n"]
 script = ExtResource("1_ywwda")
@@ -30,7 +31,8 @@ overrides = {
 "boxes_stylebox_focused": "\"res://styles/menu_opt_select.tres\"",
 "boxes_stylebox_hovered": "\"res://styles/menu_opt_norm.tres\"",
 "boxes_stylebox_normal": "\"res://styles/menu_opt_norm.tres\"",
-"font_size_custom": "10.0",
+"boxes_v_separation": "2.0",
+"font_size_custom": "9.0",
 "font_size_use_global": "false",
 "sounds_focus": "\"res://sounds/eh.wav\"",
 "sounds_hover": "\"res://sounds/narration/el.wav\"",
@@ -44,9 +46,9 @@ overrides = {
 "autoadvance_progressbar": "false",
 "box_animation_in": "1",
 "box_animation_out": "1",
-"box_margin_bottom": "80.0",
+"box_margin_bottom": "100.0",
 "box_panel": "\"res://styles/title_block.tres\"",
-"box_size": "Vector2(155, 60)",
+"box_size": "Vector2(155, 40)",
 "next_indicator_animation": "2",
 "next_indicator_enabled": "false",
 "next_indicator_size": "Vector2(10, 10)",
@@ -61,15 +63,20 @@ overrides = {
 script = ExtResource("1_ywwda")
 scene = ExtResource("6_dmfum")
 
+[sub_resource type="Resource" id="Resource_jc6aq"]
+script = ExtResource("1_ywwda")
+scene = ExtResource("7_rmamb")
+
 [resource]
 script = ExtResource("2_m6anf")
 name = "main_menu"
-layer_list = Array[String](["10", "13", "11", "12"])
+layer_list = Array[String](["10", "14", "13", "11", "12"])
 layer_info = {
 "": SubResource("Resource_cqo1n"),
 "10": SubResource("Resource_5haje"),
 "11": SubResource("Resource_p3rc0"),
 "12": SubResource("Resource_dmfum"),
-"13": SubResource("Resource_rmamb")
+"13": SubResource("Resource_rmamb"),
+"14": SubResource("Resource_jc6aq")
 }
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "11"

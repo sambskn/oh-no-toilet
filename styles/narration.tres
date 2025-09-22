@@ -30,8 +30,9 @@ overrides = {
 "next_indicator_size": "Vector2(4, 4)",
 "typing_sounds_mode": "1",
 "typing_sounds_pitch": "1.3",
-"typing_sounds_pitch_variance": "0.2",
-"typing_sounds_sounds_folder": "\"res://sounds/narration\""
+"typing_sounds_pitch_variance": "0.25",
+"typing_sounds_sounds_folder": "\"res://sounds/narration\"",
+"typing_sounds_volume_variance": "0.06"
 }
 
 [sub_resource type="Resource" id="Resource_y61ms"]
@@ -48,4 +49,4 @@ layer_info = {
 "11": SubResource("Resource_i2474"),
 "12": SubResource("Resource_y61ms")
 }
-metadata/_latest_layer = ""
+metadata/_latest_layer = "11"

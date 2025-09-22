@@ -1,0 +1,27 @@
+[style name="stats"]
+luck\: {CurrentRun.Luck}\
+laps\: {Lifetime.NumRuns}\
+piss count\: {Lifetime.PissCount}\
+~\
+\
+[if {CurrentRun.CanGoOutside} \
+outside guy\
+]\
+\
+[if {Lifetime.OzekisGrace} \
+ozekis grace\
+]\
+\
+[if {Lifetime.PodcastGuest} \
+podcast slime\
+]\
+\
+[if {Lifetime.HallwayArtist} \
+hallway artist\
+]\
+\
+[if {Lifetime.KnowsAboutSaftey} \
+safety first!\
+]
+[clear time="0.4"]
+jump start/
