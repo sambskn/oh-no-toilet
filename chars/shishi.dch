@@ -39,12 +39,12 @@
 "podcast_ad": {
 "mode": 1,
 "name": "podcast_ad",
-"pitch_base": 1.0,
-"pitch_variance": 0.0,
-"skip_characters": 0.0,
-"sound_path": "res://sounds/uh.wav",
-"volume_base": -0.1,
-"volume_variance": 0.0
+"pitch_base": 1.4,
+"pitch_variance": 0.3,
+"skip_characters": 1.0,
+"sound_path": "res://sounds/wah.wav",
+"volume_base": -0.30000000000000004,
+"volume_variance": 0.2
 },
 "podcast_intro": {
 "mode": 1,

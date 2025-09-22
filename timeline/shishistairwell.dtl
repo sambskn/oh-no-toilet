@@ -7,6 +7,10 @@ shishi: [aa][mood=podcast_intro]ay what up its ya boy shishi
 shishi: [aa][mood=podcast_intro]back with another salacious pod
 shishi: [aa][mood=podcast_intro]yeah welcome back to triple S!
 shishi: [aa][mood=podcast_intro]shishi's sumo stariwell!
+shishi: [aa][mood=podcast_intro]only on spotify
+shishi: [aa][mood=podcast_intro]your fav streaming 
+shishi: [aa][mood=podcast_ad]service run by a warmonger!! \
+fuck yeah!!
 [sound path="res://sounds/woohclap.wav" volume="0.0"]
 update shishi (main) right
 shishi: [aa][mood=podcast_intro]got the boys here, you already know
@@ -23,7 +27,7 @@ update monty rightmost
 shishi: [mood=podcast_intro]thank you for being here monty
 shishi: [aa][mood=podcast_intro]just gonna interject [mood=podcast_ad] real quick-
 shishi: [mood=podcast_intro]got a word from our sponsor
-[sound path="res://sounds/jongle.wav" volume="-1.9000000000000001"]
+[sound path="res://sounds/jongle.wav" volume="-1.9"]
 shishi: [mood=podcast_ad]horse piss energy
 [sound path="res://sounds/horse.wav" volume="0.0"]
 shishi: [mood=podcast_intro]you know they promise to put at least
@@ -40,13 +44,17 @@ shishi: [mood=angry]i want you to be with hotter peeps
 shishi: [mood=angry]dont worry about the kids
 shishi: [mood=angry]i will raise and isolate them
 shishi: [mood=angry]you just focus on your sumo,
-shishi: [mood=angry]drinking beer,
-shishi: [mood=podcast_ad]and horse piss'
+shishi: [mood=angry]raiding in your wow guild,
+shishi: [mood=podcast_ad]and horse piss!!!!!!!!!!'
+[sound path="res://sounds/horse.wav" volume="0.0"]
+[sound path="res://sounds/woohclap.wav" volume="0.0"]
 shishi: [mood=podcast_intro]thats what my wife said
 shishi: [mood=podcast_intro]anyway you were saying?
 update shishi leftmost
 update monty right
 monty: yeah im here with my boy
+monty: he knows a ton about sumo and shit
+monty: and would never embarass me
 [sound path="res://sounds/woohclap.wav" volume="0.0"]
 monty: say what up
 if {Lifetime.PodcastGuest} == true:
@@ -60,16 +68,56 @@ if {Lifetime.PodcastGuest} == true:
 	update shishi (bigbody) center [animation="Tada" move_time="0.4"]
 	[wait time="0.5"]
 	[style name="narration"]
-	[sound path="res://sounds/crush.wav" volume="-1.4000000000000001"]
+	[sound path="res://sounds/crush.wav" volume="-1.4"]
 	[wait time="0.4"]
 	shishi give ya the ol 1-2
 	life about to flash before ur eyes
 	but shishi is faster
 	theres just a boom[pause=0.5] and then nothing[pause]
 	[clear time="0.2" portraits="false" music="false" background="false" positions="false" style="false"]
+	[wait time="0.3"]
 	jump game_over/
 [clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
 - i dont wanna die
+- thx gr8 2 be here[br]im a <mega thrusto/shin yokozuna/slim jim dlx/porky pig style/real boner>
+	[wait time="1.0"]
+	[sound path="res://sounds/unlucky.wav" volume="0.0"]
+	[wait time="0.3"]
+	[music path="res://sounds/ost2.wav" fade="0.0" volume="0.0"]
+	shishi: [mood=podcast_ad]oh so you wanna die punk?
+	monty: oh geez shishi im sorry i swear he knows better
+	update shishi center
+	update monty rightmost
+	shishi (bigbody): nobody comes on my podcast and cracks wise
+	shishi (bigbody): thats not what podcasts are for
+	[music fade="0.5" volume="0.0"]
+	leave monty
+	[clear time="0.5" step="false" portraits="false" music="false" positions="false" style="false"]
+	[wait time="0.5"]
+	[style name="narration"]
+	why werent you more careful
+	leave shishi [animation="Instant Out" length="0.0"]
+	[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+	[sound path="res://sounds/swish2.wav" volume="0.0"]
+	[wait time="0.3"]
+	shishi teleports behind you
+	[style name="monty_chat_questions"]
+	shishi: [aa]hehe sorry bub
+	[clear time="0.3" step="false" portraits="false" music="false" background="false" positions="false" style="false"]
+	[wait time="0.3"]
+	[sound path="res://sounds/crush.wav" volume="-1.2000000000000002"]
+	[wait time="0.3"]
+	[sound path="res://sounds/woohclap.wav" volume="-0.8"]
+	[wait time="0.2"]
+	[style name="narration"]
+	[aa]you die live on the podcast
+	[aa]and also become part of the stairs near floor 4
+	[aa]we caress your face stone whenever we pass by
+	[aa]the episode was later pulled for being too boring
+	set {Lifetime.PodcastGuest} = true
+	[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
+	[wait time="0.3"]
+	jump game_over/
 - ay its ya boy[br]i like to piss
 	shishi: [mood=podcast_intro]you also like to shit tho?
 	[clear time="0.3" portraits="false" music="false" background="false" positions="false" style="false"]
@@ -77,7 +125,8 @@ if {Lifetime.PodcastGuest} == true:
 	- oh yeah baby
 	shishi: [mood=podcast_intro]haha yeah
 shishi: [mood=podcast_intro]cool cool whatever
-shishi: [mood=podcast_intro]anyway bye
+shishi: [mood=podcast_intro]gotta cut to some crytpo gambling bs rq
+shishi: [mood=podcast_ad]so byeeeeeeeee!!!!!!
 [clear time="0.4"]
 [wait time="0.5"]
 [style name="narration"]
@@ -88,7 +137,9 @@ thats the worst thing anyone can do
 [sound path="res://sounds/unlucky.wav" volume="0.0"]
 luck decreased by 30!
 that seems like too much!
+label death
 set {CurrentRun.Luck} -= 30.0
 set {Lifetime.PodcastGuest} = true
-[clear time="0.2"]
+[clear time="0.2" step="false" portraits="false" music="false" background="false" positions="false" style="false"]
+[wait time="0.2"]
 jump game_over/

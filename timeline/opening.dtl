@@ -67,7 +67,7 @@ else:
 label you woke up
 you didnt wake up on purpose
 dehydration and nausea teamed up,
-attached your nipples to a car battery and  started the engine
+attached your nipples to a car battery and started the engine
 ur moving with urgency
 something(s) inside you need to get out pronto
 # monty entrance
@@ -76,18 +76,18 @@ join monty right
 [style name="monty_chat_questions"]
 monty: hi its me the dog
 monty: damn bro, <u look like a day old shit danish/u smell like tuberculosis!/u remind me of a corpse i saw/u look like the cum rag's cum rag>
-monty: ur having crazy bad luck lately bro
-monty: every day you wake up about to vom dot com
+monty: ur having crazy <bad/stanky/republican> <luck/vibes/aura> lately bro
+monty: every day u wake up & ur bout to <vom dot com/slime our floors/go kerplow/bom-omb/go feral/get rabies>
 [clear time="0.1" portraits="false" music="false" background="false" positions="false" style="false"]
 [wait time="0.2"]
 [style name="narration"]
 [sound path="res://sounds/wah.wav" volume="0.0"]
-huh maybe this is the result your own actions??
+maybe this is <the result of your own actions/divine intervention/cuz you tried that powder/cuz u trusted that strange dj/early onset dementia/the big one/what love is>??
 [clear time="0.1" portraits="false" music="false" background="false" positions="false" style="false"]
 [wait time="0.2"]
 [style name="monty_chat_questions"]
-monty: [aa=1]no one could predict,
-monty: [aa=1]that the unique combination of substances
+monty: [aa=1]<no one could predict/its pretty unlikely tbh/dont go getting introspective, theres no way>
+monty: [aa=1]that the <unique combination of substances/secret blend of herbs and spices/pharohs curse flan/old lasagna>
 monty: [aa=1]you ingested last night,
 monty: [aa=2]could have had *any* adverse effect,
 monty: [aa=1]let alone this one
@@ -107,8 +107,8 @@ monty: heh, what about you bub?
 	[music fade="1.0" volume="0.0"]
 	monty: aint that the truth
 	if {CurrentRun.Luck} < 1.0:
-		monty: sadly i cant blow you
-		monty: i am a dog
+		monty: <but this aint chicago bub/but this aint the movies kid/but this aint no wind tunnel boyo>
+		monty: this is real life, and i am a dog
 		monty: well,[pause=0.5] so [pause=0.25]
 - im unlucky & [br]blaming others | [if {CurrentRun.Luck} < 0.0]
 	monty: haha lol sucks to suck
@@ -144,7 +144,7 @@ monty: anyway how we doin?
 - really gotta shit
 - mostly full of piss
 [music fade="0.2" volume="0.0"]
-monty: <oh of course}/most definitely/that is normal>
+monty: <oh of course/most definitely/that is normal>
 label go to the toilet
 monty: you should go to the toilet
 [music fade="0.1" volume="0.0"]

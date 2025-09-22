@@ -15,7 +15,7 @@ ready to unleash?
 [style name="monty_chat_questions"]
 - unleash the[br]current
 	[music fade="0.3" volume="0.0"]
-	if {CurrentRun.Luck} >= 6.0:
+	if {CurrentRun.Luck} >= 8.0:
 		[sound path="res://sounds/lucky.wav" volume="0.0"]
 		[wait time="0.3"]
 		[style name="narration"]
@@ -89,6 +89,7 @@ ready to unleash?
 			[sound path="res://sounds/sqee.wav" volume="0.0"]
 			your mass is absorbed into the host
 			nice
+			leave kotozakura
 			jump game_over/
 		- people who ride[br]lime scooters[br]on sidewalks[br]should be stopped
 			[music fade="0.3" volume="0.0"]
@@ -98,6 +99,7 @@ ready to unleash?
 		- ruh roh
 			kotozakura: indeed
 			[music fade="0.3" volume="0.0"]
+		leave --All--
 		[clear time="0.3" step="false"]
 		[wait time="0.3"]
 		[sound path="res://sounds/crush.wav" volume="0.0"]
@@ -114,6 +116,7 @@ ready to unleash?
 	monty: if u dont <drop trou/make like a fan & blow/ready your equipment/unload ur logs> rn -
 	monty: maybe you'll die?
 	monty: <idk/im a dog not a dog-tor haha lol/shrug emoji/haha ill piss on your grave ;)>
+	leave monty [animation="Slide Out Right" length="0.4" wait="true"]
 	jump ready?
 - dont
 	[music fade="0.3" volume="0.0"]
